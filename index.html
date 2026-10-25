@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireMatch AI - Recruitment CRM</title>
+    <meta name="description" content="Enterprise-grade AI-powered Recruitment CRM for managing jobs, candidate pipelines, resume parsing, explainable candidate-job matching, interviews, and recruitment analytics." />
+    <meta property="og:title" content="HireMatch AI - Recruitment CRM" />
+    <meta property="og:description" content="Enterprise-grade AI-powered Recruitment CRM for managing jobs, candidate pipelines, resume parsing, explainable candidate-job matching, interviews, and recruitment analytics." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Custom SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F52243'/%3E%3Cpath d='M9 10h3v12H9zm11 0h3v12h-3zm-11 5h14v2H9z' fill='%23FFFFFF'/%3E%3Ccircle cx='23' cy='9' r='3' fill='%23FFE4C2'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('hirematch_theme');
+          var isDark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

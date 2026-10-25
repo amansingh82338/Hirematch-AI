@@ -1,0 +1,6 @@
+{
+  "name": "HireMatch AI - Recruitment CRM",
+  "description": "Enterprise-grade AI-powered Recruitment CRM for managing jobs, candidate pipelines, resume parsing, explainable candidate-job matching, interviews, and recruitment analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

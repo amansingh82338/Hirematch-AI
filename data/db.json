@@ -1,0 +1,1793 @@
+{
+  "organizations": [
+    {
+      "id": "org_acme",
+      "name": "Acme Cloud & AI Systems",
+      "slug": "acme-cloud",
+      "domain": "acme.ai",
+      "industry": "Enterprise Software & Artificial Intelligence",
+      "plan": "Enterprise CRM Tier",
+      "createdAt": "2026-08-26T12:49:38.160Z"
+    },
+    {
+      "id": "org_1792939212681_nd10",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-25T14:40:12.681Z"
+    },
+    {
+      "id": "org_1792939212691_5if4",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-25T14:40:12.691Z"
+    },
+    {
+      "id": "org_1792939212753_79lx",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-25T14:40:12.753Z"
+    },
+    {
+      "id": "org_1792939487860_kpw5",
+      "name": "Innovate AI Labs",
+      "slug": "innovate-ai-labs",
+      "domain": "innovate.co",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-25T14:44:47.860Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_sarah",
+      "organizationId": "org_acme",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@acme.ai",
+      "role": "admin",
+      "title": "VP of Talent Acquisition",
+      "department": "Human Resources",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80",
+      "createdAt": "2026-09-05T12:49:38.161Z",
+      "passwordHash": "ce0c4b75e8560ab7e857d8f809957c27:a627ca5e2fe0e5ccfea09069702fb72b3ea54a4d18980180eb1456b51466e746195edc9b6d4709f59e1d8e71ae60ee988616657da9861d45704332e8f4120ff9",
+      "failedLoginAttempts": 0
+    },
+    {
+      "id": "usr_david",
+      "organizationId": "org_acme",
+      "name": "David Chen",
+      "email": "david.chen@acme.ai",
+      "role": "recruiter",
+      "title": "Lead Technical Recruiter",
+      "department": "Engineering Talent",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
+      "createdAt": "2026-09-10T12:49:38.161Z",
+      "passwordHash": "ce0c4b75e8560ab7e857d8f809957c27:a627ca5e2fe0e5ccfea09069702fb72b3ea54a4d18980180eb1456b51466e746195edc9b6d4709f59e1d8e71ae60ee988616657da9861d45704332e8f4120ff9"
+    },
+    {
+      "id": "usr_maria",
+      "organizationId": "org_acme",
+      "name": "Maria Santos",
+      "email": "maria.santos@acme.ai",
+      "role": "hiring_manager",
+      "title": "Director of AI Engineering",
+      "department": "Engineering",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80",
+      "createdAt": "2026-09-15T12:49:38.161Z",
+      "passwordHash": "ce0c4b75e8560ab7e857d8f809957c27:a627ca5e2fe0e5ccfea09069702fb72b3ea54a4d18980180eb1456b51466e746195edc9b6d4709f59e1d8e71ae60ee988616657da9861d45704332e8f4120ff9"
+    },
+    {
+      "id": "usr_alex",
+      "organizationId": "org_acme",
+      "name": "Alex Wong",
+      "email": "alex.wong@acme.ai",
+      "role": "interviewer",
+      "title": "Principal Systems Architect",
+      "department": "Infrastructure",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80",
+      "createdAt": "2026-09-20T12:49:38.161Z",
+      "passwordHash": "ce0c4b75e8560ab7e857d8f809957c27:a627ca5e2fe0e5ccfea09069702fb72b3ea54a4d18980180eb1456b51466e746195edc9b6d4709f59e1d8e71ae60ee988616657da9861d45704332e8f4120ff9"
+    },
+    {
+      "id": "usr_1792939212681_oc6b",
+      "organizationId": "org_1792939212681_nd10",
+      "name": "Jordan Blake",
+      "email": "recruiter_1792939212681@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "df812731fc3fdc838fbac51262927faa:0e2d8710edf4b78f67a040cb9a6071bc76b4d517156917d253b070e6be80a2ef9aba28e9ca414a4b39617198b943fa04627ff258580373c8a11d4ee6a09e5630",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-25T14:40:12.689Z"
+    },
+    {
+      "id": "usr_1792939212691_8z3y",
+      "organizationId": "org_1792939212691_5if4",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1792939212691@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "670594db793b55bad847d12e05bd9896:f07dcdec023b5eacce38ed01330b79abcecd93df3c4ed1ced83d5246c0e160a0d014b4613c7540f6da1f907772e17f450d7aabd6bb75aa3c71deb9ba6027eee0",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-25T14:40:12.698Z",
+      "lockoutUntil": "2026-10-25T14:55:12.751Z"
+    },
+    {
+      "id": "usr_1792939212753_sw4j",
+      "organizationId": "org_1792939212753_79lx",
+      "name": "Session Tester",
+      "email": "session_test_1792939212752@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "4d0f6072abe2e33e06dc9f8e83150456:beb5834a8ae3d8f4629b8a46ed5faa3587b5b7f60af58c5987f43c444156748f2a25c049ce848ae785c1121cd65398bd23220edfed9e15bedcf15561c71c8fc1",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-25T14:40:12.760Z"
+    },
+    {
+      "id": "usr_1792939487860_ktc1",
+      "organizationId": "org_1792939487860_kpw5",
+      "name": "Elena Rostova",
+      "email": "elena.test@innovate.co",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "d59e324553c07f1622be0bc4970e946a:89125e6d362eca40e5350bd7f44fc75c851d90abb2271a4ad5f80a3783df6a78d4ba2e8aa61d9dd986b75e10c049707b47f6caa2a3ca715c765f691310722501",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-25T14:44:47.867Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_ai_eng",
+      "organizationId": "org_acme",
+      "title": "Senior AI & LLM Systems Engineer",
+      "department": "Engineering",
+      "location": "San Francisco, CA",
+      "workplaceType": "hybrid",
+      "employmentType": "full_time",
+      "salaryMin": 180000,
+      "salaryMax": 235000,
+      "salaryCurrency": "USD",
+      "status": "published",
+      "description": "We are seeking a Senior AI Systems Engineer to architect and productionize generative AI pipelines, vector retrieval architectures, and real-time LLM inference services.",
+      "responsibilities": [
+        "Design low-latency generative AI model inference and agent orchestration workflows.",
+        "Optimize vector embedding pipelines and semantic retrieval indices using PostgreSQL and vector databases.",
+        "Implement continuous evaluations, fairness audits, and automated regression test benches for AI responses.",
+        "Collaborate directly with product design and frontend teams on conversational UI and streaming text-to-speech features."
+      ],
+      "requiredSkills": [
+        "Python",
+        "TypeScript",
+        "LLM Architectures",
+        "Vector Search",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "preferredSkills": [
+        "PyTorch",
+        "Kubernetes",
+        "Docker",
+        "Google Cloud Platform (GCP)",
+        "Redis"
+      ],
+      "experienceMinYears": 5,
+      "experienceMaxYears": 9,
+      "educationLevel": "Bachelor's or Master's in Computer Science or related STEM field",
+      "certifications": [
+        "GCP Professional Cloud Architect or AWS Machine Learning (Preferred)"
+      ],
+      "openingsCount": 2,
+      "hiringManagerId": "usr_maria",
+      "recruiterId": "usr_david",
+      "scoringWeights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "requirementsApproved": true,
+      "requirementsApprovedBy": "usr_sarah",
+      "requirementsApprovedAt": "2026-09-30T12:49:38.161Z",
+      "version": 1,
+      "createdAt": "2026-09-27T12:49:38.161Z",
+      "updatedAt": "2026-09-30T12:49:38.161Z"
+    },
+    {
+      "id": "job_fullstack",
+      "organizationId": "org_acme",
+      "title": "Staff Full-Stack React & Node Engineer",
+      "department": "Product Engineering",
+      "location": "New York, NY",
+      "workplaceType": "remote",
+      "employmentType": "full_time",
+      "salaryMin": 165000,
+      "salaryMax": 210000,
+      "salaryCurrency": "USD",
+      "status": "published",
+      "description": "Drive architecture across our high-scale enterprise SaaS application. You will build responsive React 19 frontends with Tailwind and high-throughput Node.js/TypeScript backend services.",
+      "responsibilities": [
+        "Architect robust full-stack features with end-to-end type safety.",
+        "Design performant relational data models and maintain low-latency database queries.",
+        "Champion accessible, high-performance web applications and responsive design systems.",
+        "Mentor mid-level engineers and conduct thorough code reviews."
+      ],
+      "requiredSkills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "REST / GraphQL"
+      ],
+      "preferredSkills": [
+        "Next.js",
+        "Docker",
+        "CI/CD",
+        "WebSockets",
+        "Playwright"
+      ],
+      "experienceMinYears": 6,
+      "experienceMaxYears": 12,
+      "educationLevel": "Bachelor's Degree in Computer Science or equivalent practical experience",
+      "certifications": [],
+      "openingsCount": 1,
+      "hiringManagerId": "usr_maria",
+      "recruiterId": "usr_david",
+      "scoringWeights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "requirementsApproved": true,
+      "requirementsApprovedBy": "usr_sarah",
+      "requirementsApprovedAt": "2026-10-05T12:49:38.161Z",
+      "version": 1,
+      "createdAt": "2026-10-03T12:49:38.161Z",
+      "updatedAt": "2026-10-05T12:49:38.161Z"
+    },
+    {
+      "id": "job_product_design",
+      "organizationId": "org_acme",
+      "title": "Lead Product Designer (Design Systems)",
+      "department": "Design",
+      "location": "San Francisco, CA",
+      "workplaceType": "hybrid",
+      "employmentType": "full_time",
+      "salaryMin": 150000,
+      "salaryMax": 190000,
+      "salaryCurrency": "USD",
+      "status": "published",
+      "description": "We are looking for a Lead Product Designer to evolve our global design system, design complex data workflows, and deliver intuitive enterprise recruitment tools.",
+      "responsibilities": [
+        "Craft intuitive user experiences for data-dense enterprise dashboards.",
+        "Maintain and evolve our multi-brand design tokens and component library in Figma.",
+        "Conduct usability studies with recruiters and talent leaders.",
+        "Partner closely with frontend engineering to ensure pixel-perfect fidelity."
+      ],
+      "requiredSkills": [
+        "Figma",
+        "Design Systems",
+        "User Research",
+        "Information Architecture",
+        "Prototyping",
+        "WCAG Accessibility"
+      ],
+      "preferredSkills": [
+        "HTML/CSS understanding",
+        "Motion Design",
+        "Micro-interactions"
+      ],
+      "experienceMinYears": 5,
+      "educationLevel": "Bachelor's Degree in Interaction Design, HCI, or related field",
+      "certifications": [],
+      "openingsCount": 1,
+      "hiringManagerId": "usr_sarah",
+      "recruiterId": "usr_david",
+      "scoringWeights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "requirementsApproved": true,
+      "requirementsApprovedBy": "usr_sarah",
+      "requirementsApprovedAt": "2026-10-10T12:49:38.161Z",
+      "version": 1,
+      "createdAt": "2026-10-07T12:49:38.161Z",
+      "updatedAt": "2026-10-10T12:49:38.161Z"
+    },
+    {
+      "id": "job_devops",
+      "organizationId": "org_acme",
+      "title": "Senior DevOps & Platform Engineer",
+      "department": "Infrastructure",
+      "location": "Austin, TX",
+      "workplaceType": "remote",
+      "employmentType": "full_time",
+      "salaryMin": 160000,
+      "salaryMax": 205000,
+      "salaryCurrency": "USD",
+      "status": "published",
+      "description": "Maintain Kubernetes infrastructure, zero-downtime deployment pipelines, and observability suites across multi-region cloud clusters.",
+      "responsibilities": [
+        "Manage production Kubernetes clusters on GCP and AWS.",
+        "Automate Terraform infrastructure-as-code and GitOps pipelines.",
+        "Configure Prometheus, Grafana, and Datadog monitoring and alerting."
+      ],
+      "requiredSkills": [
+        "Kubernetes",
+        "Terraform",
+        "Docker",
+        "GCP",
+        "CI/CD Pipelines",
+        "Linux"
+      ],
+      "preferredSkills": [
+        "Go",
+        "Prometheus",
+        "Helm",
+        "ArgoCD"
+      ],
+      "experienceMinYears": 5,
+      "educationLevel": "Bachelor's Degree",
+      "certifications": [
+        "Certified Kubernetes Administrator (CKA)"
+      ],
+      "openingsCount": 1,
+      "hiringManagerId": "usr_maria",
+      "recruiterId": "usr_david",
+      "scoringWeights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "requirementsApproved": true,
+      "version": 1,
+      "createdAt": "2026-10-15T12:49:38.161Z",
+      "updatedAt": "2026-10-15T12:49:38.161Z"
+    },
+    {
+      "title": "Principal Generative AI Architect",
+      "department": "Engineering",
+      "location": "San Francisco, CA",
+      "workplaceType": "hybrid",
+      "employmentType": "full_time",
+      "salaryMin": 160000,
+      "salaryMax": 210000,
+      "salaryCurrency": "USD",
+      "status": "published",
+      "description": "Lead generative AI agent development, vector embeddings, and real-time inference microservices.",
+      "responsibilities": [
+        "Design and maintain production services with high performance and security.",
+        "Collaborate with product, UX, and fellow engineers on user features."
+      ],
+      "requiredSkills": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "preferredSkills": [
+        "Docker",
+        "Kubernetes",
+        "GraphQL"
+      ],
+      "experienceMinYears": 5,
+      "educationLevel": "Bachelor's Degree in Computer Science or related STEM field",
+      "certifications": [],
+      "openingsCount": 1,
+      "hiringManagerId": "usr_1792939487860_ktc1",
+      "recruiterId": "usr_1792939487860_ktc1",
+      "scoringWeights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "requirementsApproved": true,
+      "organizationId": "org_1792939487860_kpw5",
+      "id": "job_1792939512295_ngao",
+      "version": 1,
+      "createdAt": "2026-10-25T14:45:12.295Z",
+      "updatedAt": "2026-10-25T14:45:12.295Z"
+    }
+  ],
+  "jobRequirementsHistory": [],
+  "candidates": [
+    {
+      "id": "cand_elena",
+      "organizationId": "org_acme",
+      "name": "Elena Rostova",
+      "email": "elena.rostova@techmail.io",
+      "phone": "+1 (415) 555-0182",
+      "location": "San Francisco, CA",
+      "headline": "Staff AI/ML Engineer | ex-DeepMind & Uber AI",
+      "summary": "7+ years architecting scalable neural networks, LLM agent workflows, vector search pipelines, and low-latency inference microservices.",
+      "totalExperienceYears": 7,
+      "skills": [
+        "Python",
+        "TypeScript",
+        "LLM Architectures",
+        "Vector Search",
+        "FastAPI",
+        "PostgreSQL",
+        "PyTorch",
+        "Docker",
+        "Kubernetes"
+      ],
+      "workHistory": [
+        {
+          "title": "Lead AI Engineer",
+          "company": "Nexus Intelligence Labs",
+          "startDate": "2023-01",
+          "endDate": "Present",
+          "current": true,
+          "description": "Architected semantic retrieval system indexing 12M enterprise documents using pgvector and FastAPI. Reduced LLM inference latency by 42%.",
+          "skillsUsed": [
+            "Python",
+            "LLM Architectures",
+            "Vector Search",
+            "PostgreSQL",
+            "FastAPI"
+          ]
+        },
+        {
+          "title": "Senior ML Engineer",
+          "company": "Uber ATG",
+          "startDate": "2019-06",
+          "endDate": "2022-12",
+          "current": false,
+          "description": "Built real-time sensor fusion models and high-throughput Python microservices in production Kubernetes clusters.",
+          "skillsUsed": [
+            "Python",
+            "PyTorch",
+            "Docker",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Master of Science in Computer Science (Artificial Intelligence)",
+          "institution": "Stanford University",
+          "year": "2019"
+        },
+        {
+          "degree": "Bachelor of Science in Electrical Engineering & Computer Science",
+          "institution": "UC Berkeley",
+          "year": "2017"
+        }
+      ],
+      "projects": [
+        {
+          "title": "AgenticRAG Framework",
+          "description": "Open source multi-turn retrieval-augmented agent pipeline with dynamic tool routing.",
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "Vector Search",
+            "Docker"
+          ],
+          "url": "https://github.com/elena-ai/agentic-rag"
+        }
+      ],
+      "certifications": [
+        "Google Cloud Professional Machine Learning Engineer"
+      ],
+      "source": "referral",
+      "reviewStatus": "verified",
+      "missingFields": [],
+      "hasResume": true,
+      "resumeFileName": "Elena_Rostova_Resume_2026.pdf",
+      "createdAt": "2026-10-05T12:49:38.161Z",
+      "updatedAt": "2026-10-23T12:49:38.161Z"
+    },
+    {
+      "id": "cand_marcus",
+      "organizationId": "org_acme",
+      "name": "Marcus Vance",
+      "email": "marcus.vance@devpro.com",
+      "phone": "+1 (212) 555-8392",
+      "location": "Brooklyn, NY",
+      "headline": "Senior Full-Stack Architect | React 19, TypeScript, Node.js",
+      "summary": "8 years of full-stack product engineering across enterprise SaaS, distributed systems, and real-time collaborative workspaces.",
+      "totalExperienceYears": 8,
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "REST / GraphQL",
+        "Next.js",
+        "Docker",
+        "CI/CD"
+      ],
+      "workHistory": [
+        {
+          "title": "Senior Full-Stack Engineer",
+          "company": "Vercel Ecosystem Partner",
+          "startDate": "2022-03",
+          "endDate": "Present",
+          "current": true,
+          "description": "Led frontend architectural migration to React 19 Server Components and Tailwind v4. Built Node.js event ingestion microservice processing 45k req/sec.",
+          "skillsUsed": [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Tailwind CSS",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "title": "Full-Stack Developer",
+          "company": "Squarespace",
+          "startDate": "2018-05",
+          "endDate": "2022-02",
+          "current": false,
+          "description": "Developed drag-and-drop template editors and GraphQL APIs.",
+          "skillsUsed": [
+            "React",
+            "Node.js",
+            "REST / GraphQL"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Science in Computer Science",
+          "institution": "Cornell University",
+          "year": "2018"
+        }
+      ],
+      "projects": [
+        {
+          "title": "FastGrid UI Kit",
+          "description": "High-speed virtualized data table for enterprise React applications.",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+          ]
+        }
+      ],
+      "certifications": [
+        "AWS Certified Solutions Architect"
+      ],
+      "source": "linkedin",
+      "reviewStatus": "verified",
+      "missingFields": [],
+      "hasResume": true,
+      "resumeFileName": "Marcus_Vance_Staff_Resume.pdf",
+      "createdAt": "2026-10-07T12:49:38.161Z",
+      "updatedAt": "2026-10-24T12:49:38.161Z"
+    },
+    {
+      "id": "cand_priya",
+      "organizationId": "org_acme",
+      "name": "Priya Patel",
+      "email": "priya.patel@designstudio.org",
+      "phone": "+1 (408) 555-9011",
+      "location": "San Jose, CA",
+      "headline": "Lead Product Designer & Design Systems Lead",
+      "summary": "6+ years crafting accessible design systems, user journeys, and complex data visual analytics for enterprise SaaS platforms.",
+      "totalExperienceYears": 6,
+      "skills": [
+        "Figma",
+        "Design Systems",
+        "User Research",
+        "Information Architecture",
+        "Prototyping",
+        "WCAG Accessibility",
+        "Motion Design"
+      ],
+      "workHistory": [
+        {
+          "title": "Lead Design Systems Specialist",
+          "company": "Atlassian",
+          "startDate": "2021-08",
+          "endDate": "Present",
+          "current": true,
+          "description": "Spearheaded enterprise component tokens across 40+ engineering squads. Raised accessibility compliance to 99.4% WCAG 2.1 AA standard.",
+          "skillsUsed": [
+            "Figma",
+            "Design Systems",
+            "WCAG Accessibility",
+            "Information Architecture"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Fine Arts in Human-Computer Interaction",
+          "institution": "Carnegie Mellon University",
+          "year": "2019"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Prism Token Engine",
+          "description": "Figma plugin syncing cross-platform variables directly to Tailwind CSS configuration.",
+          "technologies": [
+            "Figma",
+            "Design Systems",
+            "Prototyping"
+          ]
+        }
+      ],
+      "certifications": [
+        "Certified Professional in Accessibility Core Competencies (CPACC)"
+      ],
+      "source": "career_site",
+      "reviewStatus": "verified",
+      "missingFields": [],
+      "hasResume": true,
+      "resumeFileName": "Priya_Patel_Portfolio_Resume.pdf",
+      "createdAt": "2026-10-11T12:49:38.161Z",
+      "updatedAt": "2026-10-22T12:49:38.161Z"
+    },
+    {
+      "id": "cand_tariq",
+      "organizationId": "org_acme",
+      "name": "Tariq Mansoor",
+      "email": "tariq.mansoor@cloudops.net",
+      "phone": "+1 (512) 555-4819",
+      "location": "Austin, TX",
+      "headline": "Senior Cloud & DevOps Engineer | CKA Certified",
+      "summary": "6 years deploying resilient multi-cloud infrastructure, automated GitOps pipelines, and telemetry systems.",
+      "totalExperienceYears": 6,
+      "skills": [
+        "Kubernetes",
+        "Terraform",
+        "Docker",
+        "GCP",
+        "CI/CD Pipelines",
+        "Linux",
+        "Go",
+        "Prometheus"
+      ],
+      "workHistory": [
+        {
+          "title": "Senior Site Reliability Engineer",
+          "company": "Indeed.com",
+          "startDate": "2021-02",
+          "endDate": "Present",
+          "current": true,
+          "description": "Managed 140+ node Kubernetes clusters running on GCP. Automated disaster recovery runbooks with Terraform and ArgoCD.",
+          "skillsUsed": [
+            "Kubernetes",
+            "Terraform",
+            "Docker",
+            "GCP",
+            "Linux"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Science in Computer Engineering",
+          "institution": "University of Texas at Austin",
+          "year": "2019"
+        }
+      ],
+      "projects": [
+        {
+          "title": "KubeSentry Alerting Operator",
+          "description": "Kubernetes custom resource controller for intelligent alert deduplication.",
+          "technologies": [
+            "Go",
+            "Kubernetes",
+            "Prometheus"
+          ]
+        }
+      ],
+      "certifications": [
+        "Certified Kubernetes Administrator (CKA)",
+        "GCP Professional Cloud DevOps Engineer"
+      ],
+      "source": "referral",
+      "reviewStatus": "verified",
+      "missingFields": [],
+      "hasResume": true,
+      "resumeFileName": "Tariq_Mansoor_DevOps.pdf",
+      "createdAt": "2026-10-16T12:49:38.161Z",
+      "updatedAt": "2026-10-24T12:49:38.161Z"
+    },
+    {
+      "id": "cand_sophia",
+      "organizationId": "org_acme",
+      "name": "Sophia Lindqvist",
+      "email": "sophia.l@nordictech.se",
+      "location": "Remote, US",
+      "headline": "AI Research Scientist & Data Engineer",
+      "summary": "4 years working in natural language processing and computer vision with Python and PyTorch. Transitioning from academic research to enterprise AI engineering.",
+      "totalExperienceYears": 4,
+      "skills": [
+        "Python",
+        "PyTorch",
+        "Vector Search",
+        "FastAPI",
+        "Docker"
+      ],
+      "workHistory": [
+        {
+          "title": "Machine Learning Researcher",
+          "company": "KTH Royal Institute of Technology",
+          "startDate": "2022-01",
+          "endDate": "Present",
+          "current": true,
+          "description": "Published peer-reviewed research on efficient attention mechanisms and quantized LLMs.",
+          "skillsUsed": [
+            "Python",
+            "PyTorch",
+            "Vector Search"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Master of Science in Machine Learning",
+          "institution": "KTH Stockholm",
+          "year": "2022"
+        }
+      ],
+      "projects": [],
+      "certifications": [],
+      "source": "upload",
+      "reviewStatus": "pending_review",
+      "missingFields": [
+        "phone",
+        "certifications",
+        "projects"
+      ],
+      "hasResume": true,
+      "resumeFileName": "Sophia_Lindqvist_CV.pdf",
+      "createdAt": "2026-10-20T12:49:38.161Z",
+      "updatedAt": "2026-10-20T12:49:38.161Z"
+    }
+  ],
+  "resumes": [],
+  "applications": [
+    {
+      "id": "app_1",
+      "organizationId": "org_acme",
+      "jobId": "job_ai_eng",
+      "candidateId": "cand_elena",
+      "stage": "interview",
+      "stageUpdatedAt": "2026-10-22T12:49:38.161Z",
+      "overallScore": 94,
+      "matchRunId": "match_elena_ai",
+      "notes": "Exceptional background in vector search and LLM orchestrations. Technical interview scheduled.",
+      "assignedRecruiterId": "usr_david",
+      "createdAt": "2026-10-10T12:49:38.161Z",
+      "updatedAt": "2026-10-22T12:49:38.161Z"
+    },
+    {
+      "id": "app_2",
+      "organizationId": "org_acme",
+      "jobId": "job_fullstack",
+      "candidateId": "cand_marcus",
+      "stage": "offer",
+      "stageUpdatedAt": "2026-10-23T12:49:38.161Z",
+      "overallScore": 92,
+      "matchRunId": "match_marcus_fs",
+      "notes": "Passed all rounds with highest recommendations from hiring manager and peer interviewers. Offer letter drafted.",
+      "assignedRecruiterId": "usr_david",
+      "createdAt": "2026-10-11T12:49:38.161Z",
+      "updatedAt": "2026-10-23T12:49:38.161Z"
+    },
+    {
+      "id": "app_3",
+      "organizationId": "org_acme",
+      "jobId": "job_product_design",
+      "candidateId": "cand_priya",
+      "stage": "shortlisted",
+      "stageUpdatedAt": "2026-10-21T12:49:38.161Z",
+      "overallScore": 91,
+      "matchRunId": "match_priya_des",
+      "notes": "Outstanding design systems portfolio and Figma token plugin experience.",
+      "assignedRecruiterId": "usr_david",
+      "createdAt": "2026-10-15T12:49:38.161Z",
+      "updatedAt": "2026-10-21T12:49:38.161Z"
+    },
+    {
+      "id": "app_4",
+      "organizationId": "org_acme",
+      "jobId": "job_devops",
+      "candidateId": "cand_tariq",
+      "stage": "interview",
+      "stageUpdatedAt": "2026-10-24T12:49:38.161Z",
+      "overallScore": 96,
+      "matchRunId": "match_tariq_ops",
+      "notes": "Solid CKA credentials and multi-region Kubernetes mastery.",
+      "assignedRecruiterId": "usr_david",
+      "createdAt": "2026-10-18T12:49:38.161Z",
+      "updatedAt": "2026-10-24T12:49:38.161Z"
+    },
+    {
+      "id": "app_5",
+      "organizationId": "org_acme",
+      "jobId": "job_ai_eng",
+      "candidateId": "cand_sophia",
+      "stage": "screening",
+      "stageUpdatedAt": "2026-10-23T12:49:38.161Z",
+      "overallScore": 60,
+      "matchRunId": "match_sophia_ai",
+      "notes": "Strong theoretical ML knowledge; recruiter screening call arranged to evaluate production systems experience.",
+      "assignedRecruiterId": "usr_david",
+      "createdAt": "2026-10-20T12:49:38.161Z",
+      "updatedAt": "2026-10-23T12:49:38.161Z"
+    }
+  ],
+  "matchRuns": [
+    {
+      "id": "match_elena_ai",
+      "applicationId": "app_1",
+      "jobId": "job_ai_eng",
+      "candidateId": "cand_elena",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 94,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 100,
+          "weightedScore": 40,
+          "evidence": [
+            "Demonstrated Python at Nexus Intelligence Labs as Lead AI Engineer",
+            "Listed TypeScript under candidate skills profile",
+            "Demonstrated LLM Architectures at Nexus Intelligence Labs as Lead AI Engineer",
+            "Demonstrated Vector Search at Nexus Intelligence Labs as Lead AI Engineer",
+            "Demonstrated FastAPI at Nexus Intelligence Labs as Lead AI Engineer",
+            "Demonstrated PostgreSQL at Nexus Intelligence Labs as Lead AI Engineer"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 100,
+          "weightedScore": 25,
+          "evidence": [
+            "Candidate possesses 7 years of verified experience (meets/exceeds required minimum of 5 years)",
+            "Latest role: Lead AI Engineer at Nexus Intelligence Labs"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Master of Science in Computer Science (Artificial Intelligence) from Stanford University"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 80,
+          "weightedScore": 8,
+          "evidence": [
+            "Project \"AgenticRAG Framework\" using Python, FastAPI, Vector Search, Docker"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 60,
+          "weightedScore": 6,
+          "evidence": [
+            "Bonus qualification matched: PyTorch",
+            "Bonus qualification matched: Kubernetes",
+            "Bonus qualification matched: Docker"
+          ],
+          "missingEvidence": [
+            "Bonus skill not found: Google Cloud Platform (GCP)",
+            "Bonus skill not found: Redis"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [],
+      "strongMatches": [
+        "Python",
+        "TypeScript",
+        "LLM Architectures",
+        "Vector Search",
+        "FastAPI",
+        "PostgreSQL",
+        "PyTorch",
+        "Kubernetes",
+        "Docker"
+      ],
+      "summaryExplanation": "High alignment (94%): Candidate meets 6/6 required skills and has strong background alignment.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:49:38.164Z"
+    },
+    {
+      "id": "match_marcus_fs",
+      "applicationId": "app_2",
+      "jobId": "job_fullstack",
+      "candidateId": "cand_marcus",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 92,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 100,
+          "weightedScore": 40,
+          "evidence": [
+            "Demonstrated React at Vercel Ecosystem Partner as Senior Full-Stack Engineer",
+            "Demonstrated TypeScript at Vercel Ecosystem Partner as Senior Full-Stack Engineer",
+            "Demonstrated Node.js at Vercel Ecosystem Partner as Senior Full-Stack Engineer",
+            "Demonstrated PostgreSQL at Vercel Ecosystem Partner as Senior Full-Stack Engineer",
+            "Demonstrated Tailwind CSS at Vercel Ecosystem Partner as Senior Full-Stack Engineer",
+            "Demonstrated REST / GraphQL at Squarespace as Full-Stack Developer"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 100,
+          "weightedScore": 25,
+          "evidence": [
+            "Candidate possesses 8 years of verified experience (meets/exceeds required minimum of 6 years)",
+            "Latest role: Senior Full-Stack Engineer at Vercel Ecosystem Partner"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Bachelor of Science in Computer Science from Cornell University"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 80,
+          "weightedScore": 8,
+          "evidence": [
+            "Project \"FastGrid UI Kit\" using React, TypeScript, Tailwind CSS"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 40,
+          "weightedScore": 4,
+          "evidence": [
+            "Bonus qualification matched: Next.js",
+            "Bonus qualification matched: Docker"
+          ],
+          "missingEvidence": [
+            "Bonus skill not found: CI/CD",
+            "Bonus skill not found: WebSockets",
+            "Bonus skill not found: Playwright"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [],
+      "strongMatches": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "REST / GraphQL",
+        "Next.js",
+        "Docker"
+      ],
+      "summaryExplanation": "High alignment (92%): Candidate meets 6/6 required skills and has strong background alignment.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:49:38.166Z"
+    },
+    {
+      "id": "match_priya_des",
+      "applicationId": "app_3",
+      "jobId": "job_product_design",
+      "candidateId": "cand_priya",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 91,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 100,
+          "weightedScore": 40,
+          "evidence": [
+            "Demonstrated Figma at Atlassian as Lead Design Systems Specialist",
+            "Demonstrated Design Systems at Atlassian as Lead Design Systems Specialist",
+            "Listed User Research under candidate skills profile",
+            "Demonstrated Information Architecture at Atlassian as Lead Design Systems Specialist",
+            "Listed Prototyping under candidate skills profile",
+            "Demonstrated WCAG Accessibility at Atlassian as Lead Design Systems Specialist"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 100,
+          "weightedScore": 25,
+          "evidence": [
+            "Candidate possesses 6 years of verified experience (meets/exceeds required minimum of 5 years)",
+            "Latest role: Lead Design Systems Specialist at Atlassian"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Bachelor of Fine Arts in Human-Computer Interaction from Carnegie Mellon University"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 80,
+          "weightedScore": 8,
+          "evidence": [
+            "Project \"Prism Token Engine\" using Figma, Design Systems, Prototyping"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 33,
+          "weightedScore": 3,
+          "evidence": [
+            "Bonus qualification matched: Motion Design"
+          ],
+          "missingEvidence": [
+            "Bonus skill not found: HTML/CSS understanding",
+            "Bonus skill not found: Micro-interactions"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [],
+      "strongMatches": [
+        "Figma",
+        "Design Systems",
+        "User Research",
+        "Information Architecture",
+        "Prototyping",
+        "WCAG Accessibility",
+        "Motion Design"
+      ],
+      "summaryExplanation": "High alignment (91%): Candidate meets 6/6 required skills and has strong background alignment.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:49:38.168Z"
+    },
+    {
+      "id": "match_tariq_ops",
+      "applicationId": "app_4",
+      "jobId": "job_devops",
+      "candidateId": "cand_tariq",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 96,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 100,
+          "weightedScore": 40,
+          "evidence": [
+            "Demonstrated Kubernetes at Indeed.com as Senior Site Reliability Engineer",
+            "Demonstrated Terraform at Indeed.com as Senior Site Reliability Engineer",
+            "Demonstrated Docker at Indeed.com as Senior Site Reliability Engineer",
+            "Demonstrated GCP at Indeed.com as Senior Site Reliability Engineer",
+            "Listed CI/CD Pipelines under candidate skills profile",
+            "Demonstrated Linux at Indeed.com as Senior Site Reliability Engineer"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 100,
+          "weightedScore": 25,
+          "evidence": [
+            "Candidate possesses 6 years of verified experience (meets/exceeds required minimum of 5 years)",
+            "Latest role: Senior Site Reliability Engineer at Indeed.com"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.95
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Bachelor of Science in Computer Engineering from University of Texas at Austin"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 80,
+          "weightedScore": 8,
+          "evidence": [
+            "Project \"KubeSentry Alerting Operator\" using Go, Kubernetes, Prometheus"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 75,
+          "weightedScore": 8,
+          "evidence": [
+            "Bonus qualification matched: Go",
+            "Bonus qualification matched: Prometheus",
+            "Bonus qualification matched: ArgoCD"
+          ],
+          "missingEvidence": [
+            "Bonus skill not found: Helm"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [],
+      "strongMatches": [
+        "Kubernetes",
+        "Terraform",
+        "Docker",
+        "GCP",
+        "CI/CD Pipelines",
+        "Linux",
+        "Go",
+        "Prometheus",
+        "ArgoCD"
+      ],
+      "summaryExplanation": "High alignment (96%): Candidate meets 6/6 required skills and has strong background alignment.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:49:38.169Z"
+    },
+    {
+      "id": "match_sophia_ai",
+      "applicationId": "app_5",
+      "jobId": "job_ai_eng",
+      "candidateId": "cand_sophia",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 60,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 50,
+          "weightedScore": 20,
+          "evidence": [
+            "Demonstrated Python at KTH Royal Institute of Technology as Machine Learning Researcher",
+            "Demonstrated Vector Search at KTH Royal Institute of Technology as Machine Learning Researcher",
+            "Listed FastAPI under candidate skills profile"
+          ],
+          "missingEvidence": [
+            "Missing mandatory requirement: TypeScript",
+            "Missing mandatory requirement: LLM Architectures",
+            "Missing mandatory requirement: PostgreSQL"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.8
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 64,
+          "weightedScore": 16,
+          "evidence": [
+            "Latest role: Machine Learning Researcher at KTH Royal Institute of Technology"
+          ],
+          "missingEvidence": [
+            "Possesses 4 years of experience vs required minimum of 5 years (1 yr gap)"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Master of Science in Machine Learning from KTH Stockholm"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 50,
+          "weightedScore": 5,
+          "evidence": [],
+          "missingEvidence": [
+            "No standalone side projects or portfolio entries listed (evaluating via work history)"
+          ],
+          "unknownInfo": [
+            "Project artifacts not provided"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 40,
+          "weightedScore": 4,
+          "evidence": [
+            "Bonus qualification matched: PyTorch",
+            "Bonus qualification matched: Docker"
+          ],
+          "missingEvidence": [
+            "Bonus skill not found: Kubernetes",
+            "Bonus skill not found: Google Cloud Platform (GCP)",
+            "Bonus skill not found: Redis"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [
+        "TypeScript",
+        "LLM Architectures",
+        "PostgreSQL"
+      ],
+      "strongMatches": [
+        "Python",
+        "Vector Search",
+        "FastAPI",
+        "PyTorch",
+        "Docker"
+      ],
+      "summaryExplanation": "Moderate alignment (60%): Candidate satisfies core requirements (3/6) with notable gaps in: TypeScript, LLM Architectures.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:49:38.170Z"
+    },
+    {
+      "id": "match_1792932609336_inpje",
+      "applicationId": "",
+      "jobId": "job_devops",
+      "candidateId": "cand_sophia",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 43,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 17,
+          "weightedScore": 7,
+          "evidence": [
+            "Listed Docker under candidate skills profile"
+          ],
+          "missingEvidence": [
+            "Missing mandatory requirement: Kubernetes",
+            "Missing mandatory requirement: Terraform",
+            "Missing mandatory requirement: GCP",
+            "Missing mandatory requirement: CI/CD Pipelines",
+            "Missing mandatory requirement: Linux"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.8
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 64,
+          "weightedScore": 16,
+          "evidence": [
+            "Latest role: Machine Learning Researcher at KTH Royal Institute of Technology"
+          ],
+          "missingEvidence": [
+            "Possesses 4 years of experience vs required minimum of 5 years (1 yr gap)"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Master of Science in Machine Learning from KTH Stockholm"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 50,
+          "weightedScore": 5,
+          "evidence": [],
+          "missingEvidence": [
+            "No standalone side projects or portfolio entries listed (evaluating via work history)"
+          ],
+          "unknownInfo": [
+            "Project artifacts not provided"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 0,
+          "weightedScore": 0,
+          "evidence": [],
+          "missingEvidence": [
+            "Bonus skill not found: Go",
+            "Bonus skill not found: Prometheus",
+            "Bonus skill not found: Helm",
+            "Bonus skill not found: ArgoCD"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [
+        "Kubernetes",
+        "Terraform",
+        "GCP",
+        "CI/CD Pipelines",
+        "Linux"
+      ],
+      "strongMatches": [
+        "Docker"
+      ],
+      "summaryExplanation": "Low alignment (43%): Candidate lacks 5 key required skill(s) [Kubernetes, Terraform, GCP] or has an experience gap.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-25T12:50:09.336Z"
+    }
+  ],
+  "pipelineEvents": [
+    {
+      "id": "pe_1",
+      "applicationId": "app_1",
+      "fromStage": "screening",
+      "toStage": "interview",
+      "actorUserId": "usr_david",
+      "actorName": "David Chen",
+      "note": "Passed screening call with flying colors.",
+      "timestamp": "2026-10-22T12:49:38.171Z"
+    }
+  ],
+  "interviews": [
+    {
+      "id": "int_1",
+      "organizationId": "org_acme",
+      "applicationId": "app_1",
+      "jobId": "job_ai_eng",
+      "candidateId": "cand_elena",
+      "title": "System Design: Real-time LLM Inference Architecture",
+      "scheduledAt": "2026-10-27T12:49:38.171Z",
+      "durationMinutes": 60,
+      "format": "video",
+      "meetingLink": "https://meet.google.com/hrc-qwe-xyz",
+      "interviewerIds": [
+        "usr_maria",
+        "usr_alex"
+      ],
+      "status": "scheduled",
+      "preparationNotes": "Evaluate tradeoffs between vector index recall vs p99 latency in production Kubernetes.",
+      "candidateName": "Elena Rostova",
+      "jobTitle": "Senior AI & LLM Systems Engineer",
+      "createdAt": "2026-10-22T12:49:38.171Z"
+    },
+    {
+      "id": "int_2",
+      "organizationId": "org_acme",
+      "applicationId": "app_4",
+      "jobId": "job_devops",
+      "candidateId": "cand_tariq",
+      "title": "Platform Architecture & Kubernetes Deep Dive",
+      "scheduledAt": "2026-10-28T12:49:38.171Z",
+      "durationMinutes": 45,
+      "format": "video",
+      "meetingLink": "https://meet.google.com/ops-klm-uvw",
+      "interviewerIds": [
+        "usr_alex"
+      ],
+      "status": "scheduled",
+      "preparationNotes": "Probe on multi-cloud failover strategies and Terraform module modularity.",
+      "candidateName": "Tariq Mansoor",
+      "jobTitle": "Senior DevOps & Platform Engineer",
+      "createdAt": "2026-10-23T12:49:38.171Z"
+    }
+  ],
+  "interviewFeedback": [
+    {
+      "id": "fb_1",
+      "interviewId": "int_past_marcus",
+      "interviewerUserId": "usr_maria",
+      "interviewerName": "Maria Santos",
+      "rating": 5,
+      "recommendation": "strong_hire",
+      "criteriaRatings": [
+        {
+          "criterion": "System Architecture",
+          "rating": 5,
+          "comments": "Articulated clean event-driven patterns with Node and Postgres."
+        },
+        {
+          "criterion": "React 19 & Frontend Craft",
+          "rating": 5,
+          "comments": "Deep understanding of server components and modern performance profiling."
+        },
+        {
+          "criterion": "Communication & Culture",
+          "rating": 5,
+          "comments": "Transparent, proactive, highly collaborative approach."
+        }
+      ],
+      "strengths": "Exceptional depth across modern TypeScript stack; clear communication.",
+      "areasOfConcern": "None identified.",
+      "submittedAt": "2026-10-22T12:49:38.171Z"
+    }
+  ],
+  "communications": [
+    {
+      "id": "comm_1",
+      "organizationId": "org_acme",
+      "applicationId": "app_1",
+      "candidateId": "cand_elena",
+      "candidateName": "Elena Rostova",
+      "candidateEmail": "elena.rostova@techmail.io",
+      "senderUserId": "usr_david",
+      "senderName": "David Chen",
+      "type": "invite",
+      "subject": "Invitation to Interview: Senior AI & LLM Systems Engineer at Acme Cloud & AI Systems",
+      "body": "Hi Elena, Our engineering team reviewed your background and was very impressed with your experience. We would love to invite you to a 60 minute video discussion...",
+      "status": "delivered",
+      "sentAt": "2026-10-22T12:49:38.171Z",
+      "createdAt": "2026-10-22T12:49:38.171Z"
+    }
+  ],
+  "communicationTemplates": [
+    {
+      "id": "tmpl_interview_invite",
+      "organizationId": "org_acme",
+      "name": "Technical Interview Invitation",
+      "category": "invitation",
+      "subject": "Invitation to Interview: {{job_title}} at {{company_name}}",
+      "bodyTemplate": "Hi {{candidate_name}},\n\nThank you for your interest in joining {{company_name}} as our {{job_title}}! Our engineering team reviewed your background and was very impressed with your experience.\n\nWe would love to invite you to a {{duration}} minute video discussion with our team:\n- Date/Time: {{scheduled_time}}\n- Video Link: {{meeting_link}}\n\nPlease reply to confirm if this time works for you or let us know alternative availability.\n\nWarm regards,\n{{recruiter_name}}\nTalent Acquisition Team | {{company_name}}",
+      "variables": [
+        "candidate_name",
+        "job_title",
+        "company_name",
+        "duration",
+        "scheduled_time",
+        "meeting_link",
+        "recruiter_name"
+      ]
+    },
+    {
+      "id": "tmpl_offer",
+      "organizationId": "org_acme",
+      "name": "Formal Offer Letter",
+      "category": "offer",
+      "subject": "Job Offer: {{job_title}} at {{company_name}}!",
+      "bodyTemplate": "Dear {{candidate_name}},\n\nOn behalf of the entire team at {{company_name}}, I am thrilled to extend an offer for the position of {{job_title}}.\n\nWe were all thoroughly impressed by your technical depth, problem-solving skills, and cultural alignment throughout our conversations.\n\nSummary of Offer:\n- Role: {{job_title}}\n- Department: {{department}}\n- Base Compensation: {{salary_offer}}\n- Start Date: {{start_date}}\n\nPlease review the attached formal documentation and let us know your thoughts!\n\nCongratulations,\n{{recruiter_name}}",
+      "variables": [
+        "candidate_name",
+        "job_title",
+        "company_name",
+        "department",
+        "salary_offer",
+        "start_date",
+        "recruiter_name"
+      ]
+    },
+    {
+      "id": "tmpl_rejection",
+      "organizationId": "org_acme",
+      "name": "Constructive Status Update",
+      "category": "rejection",
+      "subject": "Update on your application for {{job_title}} at {{company_name}}",
+      "bodyTemplate": "Dear {{candidate_name}},\n\nThank you for taking the time to speak with our team regarding the {{job_title}} role at {{company_name}}.\n\nWhile your background is commendable, we have decided to proceed with another candidate whose specific current project experience aligns even closer with our immediate quarterly deliverables.\n\nWe will keep your verified profile in our priority candidate network should relevant future openings arise. We wish you continued success in your professional endeavors.\n\nBest regards,\n{{recruiter_name}}",
+      "variables": [
+        "candidate_name",
+        "job_title",
+        "company_name",
+        "recruiter_name"
+      ]
+    }
+  ],
+  "auditLogs": [
+    {
+      "organizationId": "org_acme",
+      "userId": "usr_sarah",
+      "userName": "Sarah Jenkins",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_sarah",
+      "details": "Successful authenticated login session established for sarah.jenkins@acme.ai",
+      "id": "aud_1792939568780_aji7",
+      "timestamp": "2026-10-25T14:46:08.780Z"
+    },
+    {
+      "organizationId": "org_1792939487860_kpw5",
+      "userId": "usr_1792939487860_ktc1",
+      "userName": "Elena Rostova",
+      "action": "JOB_CREATED",
+      "resourceType": "Job",
+      "resourceId": "job_1792939512295_ngao",
+      "details": "Created job opening \"Principal Generative AI Architect\" in Engineering",
+      "id": "aud_1792939512295_kp5u",
+      "timestamp": "2026-10-25T14:45:12.295Z"
+    },
+    {
+      "organizationId": "org_1792939487860_kpw5",
+      "userId": "usr_1792939487860_ktc1",
+      "userName": "Elena Rostova",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1792939487860_ktc1",
+      "details": "New recruiter account registered for organization \"Innovate AI Labs\"",
+      "id": "aud_1792939487868_oyn8",
+      "timestamp": "2026-10-25T14:44:47.868Z"
+    },
+    {
+      "organizationId": "org_1792939212753_79lx",
+      "userId": "usr_1792939212753_sw4j",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1792939212753_sw4j",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1792939212760_msvn",
+      "timestamp": "2026-10-25T14:40:12.760Z"
+    },
+    {
+      "organizationId": "org_1792939212691_5if4",
+      "userId": "usr_1792939212691_8z3y",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1792939212691_8z3y",
+      "details": "Successful authenticated login session established for lockout_test_1792939212691@domain.com",
+      "id": "aud_1792939212707_e38n",
+      "timestamp": "2026-10-25T14:40:12.707Z"
+    },
+    {
+      "organizationId": "org_1792939212691_5if4",
+      "userId": "usr_1792939212691_8z3y",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1792939212691_8z3y",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1792939212698_quve",
+      "timestamp": "2026-10-25T14:40:12.698Z"
+    },
+    {
+      "organizationId": "org_1792939212681_nd10",
+      "userId": "usr_1792939212681_oc6b",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1792939212681_oc6b",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1792939212689_5vlc",
+      "timestamp": "2026-10-25T14:40:12.689Z"
+    },
+    {
+      "id": "aud_1",
+      "organizationId": "org_acme",
+      "userId": "usr_david",
+      "userName": "David Chen",
+      "action": "APPLICATION_STAGE_CHANGED",
+      "resourceType": "Application",
+      "resourceId": "app_2",
+      "details": "Advanced Marcus Vance to stage \"Offer\" following unanimous positive interview recommendations.",
+      "timestamp": "2026-10-23T12:49:38.171Z"
+    },
+    {
+      "id": "aud_2",
+      "organizationId": "org_acme",
+      "userId": "usr_sarah",
+      "userName": "Sarah Jenkins",
+      "action": "JOB_REQUIREMENTS_APPROVED",
+      "resourceType": "Job",
+      "resourceId": "job_ai_eng",
+      "details": "Approved extracted requirements for Senior AI & LLM Systems Engineer (Version 1).",
+      "timestamp": "2026-09-30T12:49:38.171Z"
+    },
+    {
+      "id": "aud_3",
+      "organizationId": "org_acme",
+      "userId": "usr_david",
+      "userName": "David Chen",
+      "action": "INTERVIEW_SCHEDULED",
+      "resourceType": "Interview",
+      "resourceId": "int_1",
+      "details": "Scheduled System Design interview for Elena Rostova with Maria Santos & Alex Wong.",
+      "timestamp": "2026-10-22T12:49:38.171Z"
+    }
+  ],
+  "settings": {
+    "theme": "system",
+    "defaultWeights": {
+      "requiredSkills": 40,
+      "experience": 25,
+      "education": 15,
+      "projects": 10,
+      "preferredSkills": 10
+    }
+  },
+  "sessions": [
+    {
+      "token": "tok_207eee9e377b24551b0e02aae43b2e8d0d807eff39d15acef442b78e4fd73765",
+      "userId": "usr_1792939212681_oc6b",
+      "organizationId": "org_1792939212681_nd10",
+      "createdAt": "2026-10-25T14:40:12.689Z",
+      "expiresAt": "2026-11-01T14:40:12.689Z"
+    },
+    {
+      "token": "tok_7d877a9f9692c9bb4ec81b1a54ed4874a95f6637e9c9fc0fc23cddef31b407c8",
+      "userId": "usr_1792939212691_8z3y",
+      "organizationId": "org_1792939212691_5if4",
+      "createdAt": "2026-10-25T14:40:12.698Z",
+      "expiresAt": "2026-11-01T14:40:12.698Z"
+    },
+    {
+      "token": "tok_f7f6e24a590a67ee4fc7fc26b6d9bbd6d0d3c0d4b1d26aa118b322555675fd85",
+      "userId": "usr_1792939212691_8z3y",
+      "organizationId": "org_1792939212691_5if4",
+      "createdAt": "2026-10-25T14:40:12.707Z",
+      "expiresAt": "2026-11-01T14:40:12.707Z"
+    },
+    {
+      "token": "tok_c6b0baa11d7819d92bcddeceb887b9dcc2213a1f6b1bf41780042a8cc18c973d",
+      "userId": "usr_sarah",
+      "organizationId": "org_acme",
+      "createdAt": "2026-10-25T14:46:08.779Z",
+      "expiresAt": "2026-11-01T14:46:08.779Z"
+    }
+  ]
+}

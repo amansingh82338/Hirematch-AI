@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Reference Palette - Light Mode */
+  --crm-bg: #FFFAF4;
+  --crm-surface: #FFFFFF;
+  --crm-surface-secondary: #FFF2D8;
+  --crm-surface-tertiary: #FFE4C2;
+  --crm-accent: #F52243;
+  --crm-accent-hover: #D91837;
+  --crm-text: #24231F;
+  --crm-text-secondary: #716B63;
+  --crm-border: #E9E0D5;
+  --crm-surface-muted: #F6EEE4;
+  --crm-accent-fg: #FFFFFF;
+}
+
+.dark,
+:root.dark {
+  /* Reference Palette - Dark Mode */
+  --crm-bg: #081310;
+  --crm-surface: #10221C;
+  --crm-surface-secondary: #205746;
+  --crm-surface-tertiary: #408C75;
+  --crm-accent: #AFE5D0;
+  --crm-accent-hover: #91D6BB;
+  --crm-text: #F0F7F3;
+  --crm-text-secondary: #A6BBB1;
+  --crm-border: #29463B;
+  --crm-surface-muted: #172E25;
+  --crm-accent-fg: #081310;
+}
+
+@theme {
+  --color-crm-bg: var(--crm-bg);
+  --color-crm-surface: var(--crm-surface);
+  --color-crm-surface-secondary: var(--crm-surface-secondary);
+  --color-crm-surface-tertiary: var(--crm-surface-tertiary);
+  --color-crm-accent: var(--crm-accent);
+  --color-crm-accent-hover: var(--crm-accent-hover);
+  --color-crm-text: var(--crm-text);
+  --color-crm-text-secondary: var(--crm-text-secondary);
+  --color-crm-border: var(--crm-border);
+  --color-crm-surface-muted: var(--crm-surface-muted);
+  --color-crm-accent-fg: var(--crm-accent-fg);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--crm-bg);
+    color: var(--crm-text);
+    @apply antialiased transition-colors duration-150;
+  }
+}
+
+/* Data table and kanban scrollbars using theme borders */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--crm-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crm-text-secondary);
+}
