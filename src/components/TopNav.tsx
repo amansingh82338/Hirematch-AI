@@ -13,6 +13,7 @@ import {
   Building2,
   LogOut,
   Settings,
+  Compass,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
@@ -21,12 +22,14 @@ interface TopNavProps {
   onToggleSidebar: () => void;
   onOpenSearch: () => void;
   onNavigateSettings?: () => void;
+  onStartTour?: () => void;
 }
 
 export const TopNav: React.FC<TopNavProps> = ({
   onToggleSidebar,
   onOpenSearch,
   onNavigateSettings,
+  onStartTour,
 }) => {
   const { theme, effectiveTheme, setTheme } = useTheme();
   const { user, organization, availableUsers, switchUser, logout } = useAuth();
@@ -50,6 +53,7 @@ export const TopNav: React.FC<TopNavProps> = ({
 
         {/* Global Search Button */}
         <button
+          id="tour-global-search"
           type="button"
           onClick={onOpenSearch}
           className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg border border-crm-border bg-crm-surface-muted text-crm-text-secondary text-xs hover:border-crm-accent/40 transition-all w-48 sm:w-72 justify-between cursor-pointer"
@@ -66,6 +70,21 @@ export const TopNav: React.FC<TopNavProps> = ({
 
       {/* Right controls */}
       <div className="flex items-center gap-2 sm:gap-3">
+        {/* Onboarding Tour Trigger Button */}
+        {onStartTour && (
+          <button
+            id="tour-trigger-btn"
+            type="button"
+            onClick={onStartTour}
+            aria-label="Start product onboarding tour"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-crm-border bg-crm-surface-muted hover:bg-crm-surface-secondary text-crm-text text-xs font-medium transition-colors cursor-pointer"
+            title="Interactive Product Tour"
+          >
+            <Compass className="w-3.5 h-3.5 text-crm-accent" />
+            <span className="hidden sm:inline">Tour Guide</span>
+          </button>
+        )}
+
         {/* Tenant Organization Indicator */}
         <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-crm-surface-secondary border border-crm-border text-crm-text text-xs font-medium">
           <Building2 className="w-3.5 h-3.5 text-crm-accent" />
@@ -75,6 +94,7 @@ export const TopNav: React.FC<TopNavProps> = ({
         {/* Theme Selector Dropdown */}
         <div className="relative">
           <button
+            id="tour-theme-toggle"
             type="button"
             onClick={() => {
               setShowThemeMenu(!showThemeMenu);
@@ -192,6 +212,7 @@ export const TopNav: React.FC<TopNavProps> = ({
         {/* Role & User Switcher / Account Menu */}
         <div className="relative">
           <button
+            id="tour-user-menu"
             type="button"
             onClick={() => {
               setShowRoleMenu(!showRoleMenu);
@@ -260,6 +281,20 @@ export const TopNav: React.FC<TopNavProps> = ({
               )}
 
               <div className="space-y-1">
+                {onStartTour && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowRoleMenu(false);
+                      onStartTour();
+                    }}
+                    className="w-full flex items-center gap-2 p-2 rounded-lg text-left text-crm-text hover:bg-crm-surface-secondary transition-colors cursor-pointer font-medium"
+                  >
+                    <Compass className="w-4 h-4 text-crm-accent" />
+                    <span>Product Onboarding Tour</span>
+                  </button>
+                )}
+
                 {onNavigateSettings && (
                   <button
                     type="button"

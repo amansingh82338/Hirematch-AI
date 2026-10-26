@@ -19,6 +19,7 @@ import {
   Globe,
   FileText,
   User as UserIcon,
+  Compass,
 } from 'lucide-react';
 import { AuditLog, ScoringWeights } from '../types';
 import { api } from '../services/api';
@@ -28,11 +29,13 @@ import { useTheme } from '../context/ThemeContext';
 interface SettingsViewProps {
   onOpenPrivacy?: () => void;
   onOpenTerms?: () => void;
+  onStartTour?: () => void;
 }
 
 export const SettingsView: React.FC<SettingsViewProps> = ({
   onOpenPrivacy,
   onOpenTerms,
+  onStartTour,
 }) => {
   const { user, organization, availableUsers, switchUser, changePassword, updateProfile } = useAuth();
   const { theme, effectiveTheme, setTheme } = useTheme();
@@ -480,6 +483,31 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               </button>
             </div>
           </div>
+
+          {/* Interactive Onboarding Tour */}
+          {onStartTour && (
+            <div className="p-6 rounded-xl border border-crm-border bg-crm-surface shadow-xs space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-sm font-bold text-crm-text flex items-center gap-2">
+                    <Compass className="w-4 h-4 text-crm-accent" />
+                    <span>Interactive Product Onboarding Tour</span>
+                  </h2>
+                  <p className="text-xs text-crm-text-secondary mt-0.5">
+                    Relaunch the guided tour anytime to review key dashboard metrics, AI match alignment, job management, and candidate workflows.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={onStartTour}
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-crm-surface-secondary border border-crm-border text-crm-text hover:border-crm-accent/40 font-semibold text-xs transition-colors cursor-pointer shrink-0"
+                >
+                  <Compass className="w-4 h-4 text-crm-accent" />
+                  <span>Restart Tour</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
 

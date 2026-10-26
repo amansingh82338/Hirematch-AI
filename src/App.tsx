@@ -1,10 +1,12 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { Sidebar, NavTab } from './components/Sidebar';
 import { TopNav } from './components/TopNav';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { LoadingScreen } from './components/LoadingScreen';
+import { UserOnboardingTour } from './components/UserOnboardingTour';
+import { isTourCompleted } from './services/tour';
 
 // Lazy Loaded CRM Views
 const DashboardView = lazy(() =>
@@ -62,6 +64,29 @@ function AppContent() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [navMeta, setNavMeta] = useState<any>(null);
+  const [isTourActive, setIsTourActive] = useState(false);
+
+  useEffect(() => {
+    if (user?.id) {
+      const completed = isTourCompleted(user.id);
+      if (!completed) {
+        const timer = setTimeout(() => {
+          setIsTourActive(true);
+        }, 600);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [user?.id]);
+
+  const handleStartTour = () => {
+    if (currentTab !== 'dashboard') {
+      setCurrentTab('dashboard');
+    }
+    setIsTourActive(false);
+    setTimeout(() => {
+      setIsTourActive(true);
+    }, 200);
+  };
 
   const handleNavigate = (tab: NavTab, meta?: any) => {
     setCurrentTab(tab);
@@ -132,6 +157,7 @@ function AppContent() {
           onToggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)}
           onOpenSearch={() => setIsSearchOpen(true)}
           onNavigateSettings={() => handleNavigate('settings')}
+          onStartTour={handleStartTour}
         />
 
         {/* Viewport Router with Suspense */}
@@ -177,6 +203,7 @@ function AppContent() {
               <SettingsView
                 onOpenPrivacy={() => handleNavigate('privacy')}
                 onOpenTerms={() => handleNavigate('terms')}
+                onStartTour={handleStartTour}
               />
             )}
             {currentTab === 'privacy' && (
@@ -195,6 +222,12 @@ function AppContent() {
         onClose={() => setIsSearchOpen(false)}
         onSelectJob={handleSelectJobFromSearch}
         onSelectCandidate={handleSelectCandidateFromSearch}
+      />
+
+      {/* User Onboarding Tour */}
+      <UserOnboardingTour
+        run={isTourActive}
+        onFinish={() => setIsTourActive(false)}
       />
     </div>
   );
