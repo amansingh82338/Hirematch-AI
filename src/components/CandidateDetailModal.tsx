@@ -138,11 +138,11 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            {/* Gemini TTS Read Briefing Button */}
+            {/* Speech Synthesis Read Briefing Button */}
             <button
               onClick={handlePlayTTS}
               disabled={ttsLoading}
-              title="Read executive briefing aloud using Gemini 3.8 Flash TTS"
+              title="Read executive briefing aloud using speech synthesis"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-semibold hover:bg-indigo-100 transition-colors"
             >
               {isPlayingTTS ? (

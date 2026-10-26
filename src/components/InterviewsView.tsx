@@ -300,7 +300,7 @@ export const InterviewsView: React.FC<InterviewsViewProps> = ({
                     {/* Read Prep Aloud Button */}
                     <button
                       onClick={() => handleReadPrepAloud(intItem)}
-                      title="Read briefing notes aloud using Gemini 3.8 Flash TTS"
+                      title="Read briefing notes aloud using speech synthesis"
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors"
                     >
                       {ttsPlayingId === intItem.id ? (

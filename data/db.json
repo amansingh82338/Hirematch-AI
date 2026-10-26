@@ -98,6 +98,141 @@
       "industry": "Talent Acquisition & Technology",
       "plan": "Professional Recruiter Tier",
       "createdAt": "2026-10-26T08:41:23.677Z"
+    },
+    {
+      "id": "org_1793025259160_khat",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:34:19.160Z"
+    },
+    {
+      "id": "org_1793025259174_3l7l",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:34:19.174Z"
+    },
+    {
+      "id": "org_1793025259233_nazn",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:34:19.233Z"
+    },
+    {
+      "id": "org_1793025311484_clf8",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:11.484Z"
+    },
+    {
+      "id": "org_1793025311496_jfeo",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:11.496Z"
+    },
+    {
+      "id": "org_1793025311560_qeyv",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:11.560Z"
+    },
+    {
+      "id": "org_1793025332428_bi36",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:32.429Z"
+    },
+    {
+      "id": "org_1793025332439_rjuq",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:32.439Z"
+    },
+    {
+      "id": "org_1793025332500_yx3l",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:35:32.500Z"
+    },
+    {
+      "id": "org_1793025374141_pmhi",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:36:14.141Z"
+    },
+    {
+      "id": "org_1793025374152_jyel",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:36:14.152Z"
+    },
+    {
+      "id": "org_1793025374213_a1e8",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:36:14.213Z"
+    },
+    {
+      "id": "org_1793025536915_m6u2",
+      "name": "Jordan Blake's Team",
+      "slug": "jordan-blake-s-team",
+      "domain": "neworg.ai",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:38:56.915Z"
+    },
+    {
+      "id": "org_1793025536927_ph0x",
+      "name": "Lockout Candidate's Team",
+      "slug": "lockout-candidate-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:38:56.927Z"
+    },
+    {
+      "id": "org_1793025536984_mcy0",
+      "name": "Session Tester's Team",
+      "slug": "session-tester-s-team",
+      "domain": "domain.com",
+      "industry": "Talent Acquisition & Technology",
+      "plan": "Professional Recruiter Tier",
+      "createdAt": "2026-10-26T14:38:56.984Z"
     }
   ],
   "users": [
@@ -273,6 +408,191 @@
       "passwordHash": "403f247f908a48341b6bc9b2911921dc:bb461b8b0974522880bc075c850b22aa17fee979919fab838dcbdbad9465b8b33bdad6c6d8a79fb8e1f17a3df17179fb391a70fa7ecc4f191b14636edecde704",
       "failedLoginAttempts": 0,
       "createdAt": "2026-10-26T08:41:23.685Z"
+    },
+    {
+      "id": "usr_1793025259160_3x0m",
+      "organizationId": "org_1793025259160_khat",
+      "name": "Jordan Blake",
+      "email": "recruiter_1793025259160@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "8d39bce31140e7d4c13ea8810a2c51d5:5b1bffbdf08c82ba4cc05622587d8352be244c1fa796975b034752f4747eaeefd568c8b6636026e4177569b7f588741a00657478c212b8261d1b4162c25b4dd9",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:34:19.169Z"
+    },
+    {
+      "id": "usr_1793025259174_6y1l",
+      "organizationId": "org_1793025259174_3l7l",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1793025259174@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "6434d7dc573d27cfd8b02d37174624d9:3ff0c8f44e73d73a34ed21040de9d9295b30426bab5b8376af0faf1b626c3c75c0f94d98c2920969f6c25e3320a3a689a3e4b475e0ea27acb5348ad252ed389b",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-26T14:34:19.181Z",
+      "lockoutUntil": "2026-10-26T14:49:19.231Z"
+    },
+    {
+      "id": "usr_1793025259233_q2g0",
+      "organizationId": "org_1793025259233_nazn",
+      "name": "Session Tester",
+      "email": "session_test_1793025259233@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "613c11167b7ef900ccca9141e988dd30:1bc1c296ccdada1bf40fa8ea7811015d6840289da273ded9686557cd2669ea698aebceb86514c4a91896122456ac9b2381985954d21d58478d5e68113cbd0a23",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:34:19.240Z"
+    },
+    {
+      "id": "usr_1793025311484_arqt",
+      "organizationId": "org_1793025311484_clf8",
+      "name": "Jordan Blake",
+      "email": "recruiter_1793025311484@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "6328a7eacd24e931f77f8961c1b29f00:16d78f26998a20bc1f20194428f728d4f2a7d225e2304ecc9a07e3da74ae4ffb9cba6ebe1100d94dffdd968e537535f96387f5b4dcc52c76bd4f48e6002be38c",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:35:11.494Z"
+    },
+    {
+      "id": "usr_1793025311496_cnma",
+      "organizationId": "org_1793025311496_jfeo",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1793025311496@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "395cdc2ab63d080a095dc60eec3712b0:d782c9042ed561691d39bf9453594444497a9abf44987a39607844f9e6c1556521e52ca566a4db66332787edf6a0ca31be9d73fef0e02a88fb8a0b31e09015e5",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-26T14:35:11.503Z",
+      "lockoutUntil": "2026-10-26T14:50:11.559Z"
+    },
+    {
+      "id": "usr_1793025311560_91g1",
+      "organizationId": "org_1793025311560_qeyv",
+      "name": "Session Tester",
+      "email": "session_test_1793025311560@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "d9b9e4b52dc163f82333bd8c14c10ee2:df4e26695ff3bc64477acaeb66902b8f85c3e97da15e51fa9c2e5ec5d752e7818be63a13e72fc34945162c363d13afca984423894d64506083cf65548e497194",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:35:11.569Z"
+    },
+    {
+      "id": "usr_1793025332429_lpab",
+      "organizationId": "org_1793025332428_bi36",
+      "name": "Jordan Blake",
+      "email": "recruiter_1793025332428@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "db1907ded7739c61412cc8a1b460c8af:337e562528e0b1d24bd7f60364245c5cd7f991ad7e4d58d428b9f1be5a0145ce9c59b4dc047a67a662a5ff9b5f315791aa0bd625a6d529987a77f9f9c1afa1f6",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:35:32.436Z"
+    },
+    {
+      "id": "usr_1793025332439_96q4",
+      "organizationId": "org_1793025332439_rjuq",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1793025332439@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "5fd6fb6b7e8023bf55387b5241af78b7:d3f725404d18e1a9ce4fde78c98a878f8fb36d533078bf120d1d50af1fd5b0097db03a07798c2be259a6994964147a9963f885b4d690ea5b86ac0a84a1c27be5",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-26T14:35:32.446Z",
+      "lockoutUntil": "2026-10-26T14:50:32.499Z"
+    },
+    {
+      "id": "usr_1793025332500_ey57",
+      "organizationId": "org_1793025332500_yx3l",
+      "name": "Session Tester",
+      "email": "session_test_1793025332500@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "561194e22f7354d80fb88f4ff430857a:a4cdf3a2632a17c1d52c79a786bc0220f8941a1c753f06344e6b6fdb9439b223a73f7a14f58404bdead950d37ee4746d3be66ee14468005e706f9c7ead35be07",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:35:32.509Z"
+    },
+    {
+      "id": "usr_1793025374141_6g9n",
+      "organizationId": "org_1793025374141_pmhi",
+      "name": "Jordan Blake",
+      "email": "recruiter_1793025374141@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "f61d457897861bd5f0bf72fec65366c5:9d4ca1ebd3250ba09be27c23514c0ad284cbd002e17daefea0b60a3f5fb14be0cc222e57a581820c9e941227434c1589c00becb4bc5a6802d61bcffd7aaafeac",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:36:14.148Z"
+    },
+    {
+      "id": "usr_1793025374152_f0d5",
+      "organizationId": "org_1793025374152_jyel",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1793025374152@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "4f026a6e55725b8394546e622a5eeb4d:4b06c708cc72a1b0eaee62e3ede81fd07063dd193eb2bd6709afc661c34977adcfb9580ea5776e3104631cd82adb89081ff6cce3127c5a9bc8d1010ca121330c",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-26T14:36:14.161Z",
+      "lockoutUntil": "2026-10-26T14:51:14.212Z"
+    },
+    {
+      "id": "usr_1793025374213_43wu",
+      "organizationId": "org_1793025374213_a1e8",
+      "name": "Session Tester",
+      "email": "session_test_1793025374213@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "21c2a4204938c37a067aed5ebebd9eb2:785caff2ef073a404e58af70bf6ccb295ad98f2e46744e51bb49384c62e3d80b50ef21bec75d673846b3dfd6e6797a3cc616044b0d130a410cc986302a327b8c",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:36:14.221Z"
+    },
+    {
+      "id": "usr_1793025536916_09a7",
+      "organizationId": "org_1793025536915_m6u2",
+      "name": "Jordan Blake",
+      "email": "recruiter_1793025536915@neworg.ai",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "2b14b5ef5321ed1b9accf07b1e1a6e64:e653616dca29971c191b05ba36260e32c3a66185951467dc6ec6b5058ccba5b29bc7bf86bf4bdd0a3c6d83c825c7111a6b2a734503a948da3a8d209f92ce8588",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:38:56.923Z"
+    },
+    {
+      "id": "usr_1793025536927_dyg9",
+      "organizationId": "org_1793025536927_ph0x",
+      "name": "Lockout Candidate",
+      "email": "lockout_test_1793025536927@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "8d0099061cc46b0de52dc16ff86e610a:a7e151e3a38f3cfbaf7f2df78d4f9831f3f2308ecac5b6e76452919f902e8fb8a49846bd495d5df24033a8f28a1fb9beafa2daa08a52f6ca4ea707a7d9cb6efe",
+      "failedLoginAttempts": 5,
+      "createdAt": "2026-10-26T14:38:56.934Z",
+      "lockoutUntil": "2026-10-26T14:53:56.982Z"
+    },
+    {
+      "id": "usr_1793025536984_jg9u",
+      "organizationId": "org_1793025536984_mcy0",
+      "name": "Session Tester",
+      "email": "session_test_1793025536984@domain.com",
+      "role": "admin",
+      "title": "Talent Lead",
+      "department": "Recruitment & Talent Operations",
+      "passwordHash": "8da305e285d0a0d268d2361662c9086c:75dba083f5982b56b5cb48fd83b509fae47ce0bebfbe2ef1bb9e6b5af06f1e2485ff58a8dbb563326312ef9de696388b5802f4e085e0500940ec8e151046d5ac",
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-10-26T14:38:56.991Z"
     }
   ],
   "jobs": [
@@ -1612,6 +1932,114 @@
       "summaryExplanation": "Low alignment (43%): Candidate lacks 5 key required skill(s) [Kubernetes, Terraform, GCP] or has an experience gap.",
       "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
       "generatedAt": "2026-10-25T12:50:09.336Z"
+    },
+    {
+      "id": "match_1793025193654_lr6au",
+      "applicationId": "",
+      "jobId": "job_devops",
+      "candidateId": "cand_sophia",
+      "scoringConfigVersion": 1,
+      "weights": {
+        "requiredSkills": 40,
+        "experience": 25,
+        "education": 15,
+        "projects": 10,
+        "preferredSkills": 10
+      },
+      "overallScore": 43,
+      "criteria": [
+        {
+          "criterion": "requiredSkills",
+          "name": "Required Skills",
+          "weight": 40,
+          "score": 17,
+          "weightedScore": 7,
+          "evidence": [
+            "Listed Docker under candidate skills profile"
+          ],
+          "missingEvidence": [
+            "Missing mandatory requirement: Kubernetes",
+            "Missing mandatory requirement: Terraform",
+            "Missing mandatory requirement: GCP",
+            "Missing mandatory requirement: CI/CD Pipelines",
+            "Missing mandatory requirement: Linux"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.8
+        },
+        {
+          "criterion": "experience",
+          "name": "Relevant Experience",
+          "weight": 25,
+          "score": 64,
+          "weightedScore": 16,
+          "evidence": [
+            "Latest role: Machine Learning Researcher at KTH Royal Institute of Technology"
+          ],
+          "missingEvidence": [
+            "Possesses 4 years of experience vs required minimum of 5 years (1 yr gap)"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "education",
+          "name": "Education & Academic Background",
+          "weight": 15,
+          "score": 100,
+          "weightedScore": 15,
+          "evidence": [
+            "Meets requirement with Master of Science in Machine Learning from KTH Stockholm"
+          ],
+          "missingEvidence": [],
+          "unknownInfo": [],
+          "confidence": 0.9
+        },
+        {
+          "criterion": "projects",
+          "name": "Projects & Practical Portfolio",
+          "weight": 10,
+          "score": 50,
+          "weightedScore": 5,
+          "evidence": [],
+          "missingEvidence": [
+            "No standalone side projects or portfolio entries listed (evaluating via work history)"
+          ],
+          "unknownInfo": [
+            "Project artifacts not provided"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "criterion": "preferredSkills",
+          "name": "Preferred / Bonus Qualifications",
+          "weight": 10,
+          "score": 0,
+          "weightedScore": 0,
+          "evidence": [],
+          "missingEvidence": [
+            "Bonus skill not found: Go",
+            "Bonus skill not found: Prometheus",
+            "Bonus skill not found: Helm",
+            "Bonus skill not found: ArgoCD"
+          ],
+          "unknownInfo": [],
+          "confidence": 0.85
+        }
+      ],
+      "skillGaps": [
+        "Kubernetes",
+        "Terraform",
+        "GCP",
+        "CI/CD Pipelines",
+        "Linux"
+      ],
+      "strongMatches": [
+        "Docker"
+      ],
+      "summaryExplanation": "Low alignment (43%): Candidate lacks 5 key required skill(s) [Kubernetes, Terraform, GCP] or has an experience gap.",
+      "disclaimer": "This match score is an advisory indicator based solely on extracted job-related qualifications and approved criteria weights. It does NOT predict probability of job success and must never be used for automated rejection or autonomous hiring decisions.",
+      "generatedAt": "2026-10-26T14:33:13.654Z"
     }
   ],
   "pipelineEvents": [
@@ -1768,6 +2196,237 @@
     }
   ],
   "auditLogs": [
+    {
+      "organizationId": "org_1793025536984_mcy0",
+      "userId": "usr_1793025536984_jg9u",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025536984_jg9u",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1793025536993_kyk3",
+      "timestamp": "2026-10-26T14:38:56.994Z"
+    },
+    {
+      "organizationId": "org_1793025536927_ph0x",
+      "userId": "usr_1793025536927_dyg9",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1793025536927_dyg9",
+      "details": "Successful authenticated login session established for lockout_test_1793025536927@domain.com",
+      "id": "aud_1793025536943_epep",
+      "timestamp": "2026-10-26T14:38:56.943Z"
+    },
+    {
+      "organizationId": "org_1793025536927_ph0x",
+      "userId": "usr_1793025536927_dyg9",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025536927_dyg9",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1793025536935_p5fi",
+      "timestamp": "2026-10-26T14:38:56.935Z"
+    },
+    {
+      "organizationId": "org_1793025536915_m6u2",
+      "userId": "usr_1793025536916_09a7",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025536916_09a7",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1793025536925_z95i",
+      "timestamp": "2026-10-26T14:38:56.925Z"
+    },
+    {
+      "organizationId": "org_acme",
+      "userId": "usr_sarah",
+      "userName": "Sarah Jenkins",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_sarah",
+      "details": "Successful authenticated login session established for sarah.jenkins@acme.ai",
+      "id": "aud_1793025465555_l8uy",
+      "timestamp": "2026-10-26T14:37:45.555Z"
+    },
+    {
+      "organizationId": "org_1793025374213_a1e8",
+      "userId": "usr_1793025374213_43wu",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025374213_43wu",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1793025374222_6og9",
+      "timestamp": "2026-10-26T14:36:14.222Z"
+    },
+    {
+      "organizationId": "org_1793025374152_jyel",
+      "userId": "usr_1793025374152_f0d5",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1793025374152_f0d5",
+      "details": "Successful authenticated login session established for lockout_test_1793025374152@domain.com",
+      "id": "aud_1793025374170_gcv8",
+      "timestamp": "2026-10-26T14:36:14.170Z"
+    },
+    {
+      "organizationId": "org_1793025374152_jyel",
+      "userId": "usr_1793025374152_f0d5",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025374152_f0d5",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1793025374161_cv5t",
+      "timestamp": "2026-10-26T14:36:14.161Z"
+    },
+    {
+      "organizationId": "org_1793025374141_pmhi",
+      "userId": "usr_1793025374141_6g9n",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025374141_6g9n",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1793025374150_q9h4",
+      "timestamp": "2026-10-26T14:36:14.150Z"
+    },
+    {
+      "organizationId": "org_1793025332500_yx3l",
+      "userId": "usr_1793025332500_ey57",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025332500_ey57",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1793025332510_o58s",
+      "timestamp": "2026-10-26T14:35:32.510Z"
+    },
+    {
+      "organizationId": "org_1793025332439_rjuq",
+      "userId": "usr_1793025332439_96q4",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1793025332439_96q4",
+      "details": "Successful authenticated login session established for lockout_test_1793025332439@domain.com",
+      "id": "aud_1793025332457_gnmd",
+      "timestamp": "2026-10-26T14:35:32.457Z"
+    },
+    {
+      "organizationId": "org_1793025332439_rjuq",
+      "userId": "usr_1793025332439_96q4",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025332439_96q4",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1793025332448_spx9",
+      "timestamp": "2026-10-26T14:35:32.448Z"
+    },
+    {
+      "organizationId": "org_1793025332428_bi36",
+      "userId": "usr_1793025332429_lpab",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025332429_lpab",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1793025332438_680e",
+      "timestamp": "2026-10-26T14:35:32.438Z"
+    },
+    {
+      "organizationId": "org_1793025311560_qeyv",
+      "userId": "usr_1793025311560_91g1",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025311560_91g1",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1793025311570_88xl",
+      "timestamp": "2026-10-26T14:35:11.570Z"
+    },
+    {
+      "organizationId": "org_1793025311496_jfeo",
+      "userId": "usr_1793025311496_cnma",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1793025311496_cnma",
+      "details": "Successful authenticated login session established for lockout_test_1793025311496@domain.com",
+      "id": "aud_1793025311517_h98f",
+      "timestamp": "2026-10-26T14:35:11.517Z"
+    },
+    {
+      "organizationId": "org_1793025311496_jfeo",
+      "userId": "usr_1793025311496_cnma",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025311496_cnma",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1793025311505_33ym",
+      "timestamp": "2026-10-26T14:35:11.505Z"
+    },
+    {
+      "organizationId": "org_1793025311484_clf8",
+      "userId": "usr_1793025311484_arqt",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025311484_arqt",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1793025311495_kbmu",
+      "timestamp": "2026-10-26T14:35:11.495Z"
+    },
+    {
+      "organizationId": "org_1793025259233_nazn",
+      "userId": "usr_1793025259233_q2g0",
+      "userName": "Session Tester",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025259233_q2g0",
+      "details": "New recruiter account registered for organization \"Session Tester's Team\"",
+      "id": "aud_1793025259241_8o3o",
+      "timestamp": "2026-10-26T14:34:19.241Z"
+    },
+    {
+      "organizationId": "org_1793025259174_3l7l",
+      "userId": "usr_1793025259174_6y1l",
+      "userName": "Lockout Candidate",
+      "action": "USER_LOGIN",
+      "resourceType": "User",
+      "resourceId": "usr_1793025259174_6y1l",
+      "details": "Successful authenticated login session established for lockout_test_1793025259174@domain.com",
+      "id": "aud_1793025259190_x2pk",
+      "timestamp": "2026-10-26T14:34:19.190Z"
+    },
+    {
+      "organizationId": "org_1793025259174_3l7l",
+      "userId": "usr_1793025259174_6y1l",
+      "userName": "Lockout Candidate",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025259174_6y1l",
+      "details": "New recruiter account registered for organization \"Lockout Candidate's Team\"",
+      "id": "aud_1793025259181_3qxm",
+      "timestamp": "2026-10-26T14:34:19.181Z"
+    },
+    {
+      "organizationId": "org_1793025259160_khat",
+      "userId": "usr_1793025259160_3x0m",
+      "userName": "Jordan Blake",
+      "action": "USER_REGISTERED",
+      "resourceType": "User",
+      "resourceId": "usr_1793025259160_3x0m",
+      "details": "New recruiter account registered for organization \"Jordan Blake's Team\"",
+      "id": "aud_1793025259171_bvwg",
+      "timestamp": "2026-10-26T14:34:19.171Z"
+    },
     {
       "organizationId": "org_acme",
       "userId": "usr_sarah",
@@ -2263,6 +2922,125 @@
       "organizationId": "org_acme",
       "createdAt": "2026-10-26T08:50:25.648Z",
       "expiresAt": "2026-11-02T08:50:25.648Z"
+    },
+    {
+      "token": "tok_915404ac004aac7b6959e34ab713698f004005ad94bd1ea08db6d81dce1666da",
+      "userId": "usr_alex",
+      "organizationId": "org_acme",
+      "createdAt": "2026-10-26T14:33:22.799Z",
+      "expiresAt": "2026-11-02T14:33:22.799Z"
+    },
+    {
+      "token": "tok_c3802062b2ad263f4357ee5a55c3c431afde7810a1daeb63000f83b1a296147b",
+      "userId": "usr_1793025259160_3x0m",
+      "organizationId": "org_1793025259160_khat",
+      "createdAt": "2026-10-26T14:34:19.169Z",
+      "expiresAt": "2026-11-02T14:34:19.169Z"
+    },
+    {
+      "token": "tok_e2dad561fafc9f68e0e807e87e0b5f6c50701f33f7d15fe53a405bda8b6049d9",
+      "userId": "usr_1793025259174_6y1l",
+      "organizationId": "org_1793025259174_3l7l",
+      "createdAt": "2026-10-26T14:34:19.181Z",
+      "expiresAt": "2026-11-02T14:34:19.181Z"
+    },
+    {
+      "token": "tok_b3bfde36fb8ec053b91d5e22f6b229013478b4fc072f5916fba55759075e01c3",
+      "userId": "usr_1793025259174_6y1l",
+      "organizationId": "org_1793025259174_3l7l",
+      "createdAt": "2026-10-26T14:34:19.189Z",
+      "expiresAt": "2026-11-02T14:34:19.190Z"
+    },
+    {
+      "token": "tok_feb13659a3164427711ad4aa3d5a02b33245aebafb80f9bc5824ceeef0ad3e13",
+      "userId": "usr_1793025311484_arqt",
+      "organizationId": "org_1793025311484_clf8",
+      "createdAt": "2026-10-26T14:35:11.494Z",
+      "expiresAt": "2026-11-02T14:35:11.494Z"
+    },
+    {
+      "token": "tok_cc9095f816fcb1daaf7069e9ccf88b16c3c045b9c4801126bc604e9af74c4388",
+      "userId": "usr_1793025311496_cnma",
+      "organizationId": "org_1793025311496_jfeo",
+      "createdAt": "2026-10-26T14:35:11.503Z",
+      "expiresAt": "2026-11-02T14:35:11.503Z"
+    },
+    {
+      "token": "tok_31ede1f860f8c5c0d5609245cfb078c9f692dcb734c2baa90844e226fb19770e",
+      "userId": "usr_1793025311496_cnma",
+      "organizationId": "org_1793025311496_jfeo",
+      "createdAt": "2026-10-26T14:35:11.516Z",
+      "expiresAt": "2026-11-02T14:35:11.516Z"
+    },
+    {
+      "token": "tok_7a56b779d9af20a7590716c3dc0fd6264e9dc51798ff5ab3fe12f7fee700e25e",
+      "userId": "usr_1793025332429_lpab",
+      "organizationId": "org_1793025332428_bi36",
+      "createdAt": "2026-10-26T14:35:32.437Z",
+      "expiresAt": "2026-11-02T14:35:32.437Z"
+    },
+    {
+      "token": "tok_edb0904a2ad95565d27c784fdd51e50ecc8d2db7076b745f9813ef55b4e07d58",
+      "userId": "usr_1793025332439_96q4",
+      "organizationId": "org_1793025332439_rjuq",
+      "createdAt": "2026-10-26T14:35:32.446Z",
+      "expiresAt": "2026-11-02T14:35:32.446Z"
+    },
+    {
+      "token": "tok_3b18ef48a844bd483fa3d9675fa0b5a416db55dbb0115aa4af4e4613f5a8b6e6",
+      "userId": "usr_1793025332439_96q4",
+      "organizationId": "org_1793025332439_rjuq",
+      "createdAt": "2026-10-26T14:35:32.456Z",
+      "expiresAt": "2026-11-02T14:35:32.456Z"
+    },
+    {
+      "token": "tok_119366c2d6fe34eab661904dbd57605fcbbb39af3d55dbf0d0bfe7d742274bd8",
+      "userId": "usr_1793025374141_6g9n",
+      "organizationId": "org_1793025374141_pmhi",
+      "createdAt": "2026-10-26T14:36:14.149Z",
+      "expiresAt": "2026-11-02T14:36:14.149Z"
+    },
+    {
+      "token": "tok_c97729f7bbb84020274a4c379ee5b652545824c43a0204519ee81bfd80439703",
+      "userId": "usr_1793025374152_f0d5",
+      "organizationId": "org_1793025374152_jyel",
+      "createdAt": "2026-10-26T14:36:14.161Z",
+      "expiresAt": "2026-11-02T14:36:14.161Z"
+    },
+    {
+      "token": "tok_eaafcda651b390f2dd299479648fb6409fe66e23442525dafece2f162840f76f",
+      "userId": "usr_1793025374152_f0d5",
+      "organizationId": "org_1793025374152_jyel",
+      "createdAt": "2026-10-26T14:36:14.169Z",
+      "expiresAt": "2026-11-02T14:36:14.169Z"
+    },
+    {
+      "token": "tok_3f6e243033dcf94e6639e998fc67ec5eb47697a414c8d25a78fb3ada6d9747d3",
+      "userId": "usr_sarah",
+      "organizationId": "org_acme",
+      "createdAt": "2026-10-26T14:37:45.553Z",
+      "expiresAt": "2026-11-02T14:37:45.554Z"
+    },
+    {
+      "token": "tok_c43b77ad29786582e47a741ec2c91f2f777c462988a960294296419cf00cc7b7",
+      "userId": "usr_1793025536916_09a7",
+      "organizationId": "org_1793025536915_m6u2",
+      "createdAt": "2026-10-26T14:38:56.923Z",
+      "expiresAt": "2026-11-02T14:38:56.923Z"
+    },
+    {
+      "token": "tok_8f7386edfdf7c7f54e4c38a5f9ab69ce0f8a30835e6e6042cc9c4e8a9c290c76",
+      "userId": "usr_1793025536927_dyg9",
+      "organizationId": "org_1793025536927_ph0x",
+      "createdAt": "2026-10-26T14:38:56.934Z",
+      "expiresAt": "2026-11-02T14:38:56.934Z"
+    },
+    {
+      "token": "tok_913f133cea745677638dabd209113d6929cfceb861b651a9c07878cbc9536157",
+      "userId": "usr_1793025536927_dyg9",
+      "organizationId": "org_1793025536927_ph0x",
+      "createdAt": "2026-10-26T14:38:56.943Z",
+      "expiresAt": "2026-11-02T14:38:56.943Z"
     }
   ]
 }

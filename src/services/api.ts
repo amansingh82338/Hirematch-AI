@@ -439,7 +439,7 @@ export const api = {
     return res.json();
   },
 
-  // AI Image Generation (gemini-3-pro-image-preview with 1K, 2K, 4K)
+  // AI Image Generation (Embedded Vector Graphics Engine with 1K, 2K, 4K)
   async generateRecruitmentImage(prompt: string, aspectRatio?: string, imageSize?: '1K' | '2K' | '4K'): Promise<{ imageUrl: string; imageSize: string; modelUsed: string }> {
     const res = await fetch('/api/ai/generate-image', {
       method: 'POST',

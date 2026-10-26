@@ -18,7 +18,7 @@ import { api } from '../services/api';
 export const BrandStudioView: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'image' | 'tts'>('image');
 
-  // Image Generation State (gemini-3-pro-image-preview with 1K, 2K, 4K)
+  // Image Generation State (Embedded Vector Asset Engine with 1K, 2K, 4K)
   const [imagePrompt, setImagePrompt] = useState(
     'Modern tech company recruitment banner: Hiring Senior AI Systems Engineers. Minimalist dark corporate aesthetic with glowing blue holographic nodes and clean typography.'
   );
@@ -27,7 +27,7 @@ export const BrandStudioView: React.FC = () => {
   const [generatingImage, setGeneratingImage] = useState(false);
   const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null);
 
-  // Text-to-Speech State (gemini-3.8-flash-tts)
+  // Text-to-Speech State (Embedded Speech Synthesis)
   const [ttsText, setTtsText] = useState(
     'Welcome to the Acme Cloud executive hiring committee. Today we are reviewing top candidates for the Senior AI Systems Engineer opening. Elena Rostova demonstrated exceptional proficiency in vector database retrieval and distributed inference architectures.'
   );
@@ -98,11 +98,11 @@ export const BrandStudioView: React.FC = () => {
         <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
           Employer Brand & Speech Studio
           <span className="text-xs px-2.5 py-0.5 rounded-full font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
-            Multimodal GenAI
+            HireMatch Studio
           </span>
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Generate high-resolution recruitment social assets (1K, 2K, 4K) with Gemini 3 Pro and listen to executive candidate briefs via Gemini 3.8 Flash TTS.
+          Generate high-resolution recruitment social assets (1K, 2K, 4K) with our embedded vector engine and listen to executive candidate briefs via speech synthesis.
         </p>
       </div>
 
@@ -117,7 +117,7 @@ export const BrandStudioView: React.FC = () => {
           }`}
         >
           <ImageIcon className="w-4 h-4" />
-          <span>High-Quality Image Generator (gemini-3-pro-image-preview)</span>
+          <span>High-Quality Image Generator (Vector Asset Engine)</span>
         </button>
         <button
           onClick={() => setActiveTab('tts')}
@@ -128,7 +128,7 @@ export const BrandStudioView: React.FC = () => {
           }`}
         >
           <Volume2 className="w-4 h-4" />
-          <span>Candidate Briefing Speech Reader (gemini-3.8-flash-tts)</span>
+          <span>Candidate Briefing Speech Reader (Speech Synthesizer)</span>
         </button>
       </div>
 
@@ -160,7 +160,7 @@ export const BrandStudioView: React.FC = () => {
               <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5 flex items-center justify-between">
                 <span>Output Resolution (Affordance: 1K, 2K, 4K)</span>
                 <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-mono">
-                  gemini-3-pro-image-preview
+                  hirematch-nlp-vector-engine
                 </span>
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -264,7 +264,7 @@ export const BrandStudioView: React.FC = () => {
           <div className="p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xs space-y-4">
             <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <Volume2 className="w-4 h-4 text-indigo-500" />
-              <span>Voice Briefing Synthesis (gemini-3.8-flash-tts)</span>
+              <span>Voice Briefing Synthesis (Speech Engine)</span>
             </h2>
 
             <div>
@@ -308,7 +308,7 @@ export const BrandStudioView: React.FC = () => {
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm shadow-indigo-500/20 disabled:opacity-50 transition-colors"
             >
               <Volume2 className="w-4 h-4" />
-              <span>{generatingTTS ? 'Synthesizing Audio via Gemini...' : 'Synthesize & Play Audio'}</span>
+              <span>{generatingTTS ? 'Synthesizing Audio...' : 'Synthesize & Play Audio'}</span>
             </button>
           </div>
 
@@ -325,7 +325,7 @@ export const BrandStudioView: React.FC = () => {
 
                 <div>
                   <div className="font-bold text-sm text-slate-900 dark:text-white">
-                    Gemini 3.8 Flash Unary Audio WAV
+                    Executive Speech Synthesis Audio
                   </div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                     24kHz Mono 16-bit RIFF Audio Format • Voice: {voiceName}

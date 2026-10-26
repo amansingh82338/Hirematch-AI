@@ -53,7 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'interviews', label: 'Interviews & Prep', icon: CalendarCheck },
     { id: 'communications', label: 'Candidate Outreach', icon: Mail },
     { id: 'analytics', label: 'Hiring Analytics', icon: BarChart3 },
-    { id: 'copilot', label: 'AI Talent Copilot', icon: BotMessageSquare, badge: 'GenAI' },
+    { id: 'copilot', label: 'AI Talent Copilot', icon: BotMessageSquare, badge: 'NLP' },
     { id: 'brand_studio', label: 'Employer Brand Studio', icon: Sparkles, badge: 'Media' },
     { id: 'settings', label: 'Settings & Account', icon: Settings },
   ];

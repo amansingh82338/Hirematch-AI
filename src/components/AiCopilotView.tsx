@@ -31,7 +31,7 @@ export const AiCopilotView: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'model',
-      text: `Hello! I am your **AI Talent Copilot**, powered by Gemini 3.8 Flash.
+      text: `Hello! I am your **AI Talent Copilot**, powered by the embedded HireMatch NLP Engine.
 
 I can help you with:
 - Crafting high-precision **Boolean search strings** for LinkedIn Recruiter & GitHub
@@ -68,7 +68,7 @@ Select a role above or ask a question below!`,
     setLoading(true);
 
     try {
-      // Map to Gemini history format
+      // Map to message history format
       const formattedHistory = newMessages.map((m) => ({
         role: m.role,
         parts: [{ text: m.text }],
@@ -151,7 +151,7 @@ Select a role above or ask a question below!`,
             <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
               AI Talent Copilot
               <span className="text-xs px-2.5 py-0.5 rounded-full font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
-                gemini-3.8-flash
+                HireMatch NLP Model
               </span>
             </h1>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
@@ -254,7 +254,7 @@ Select a role above or ask a question below!`,
               <Sparkles className="w-4 h-4 animate-spin" />
             </div>
             <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-xs text-slate-500 animate-pulse">
-              Gemini is analyzing requirements...
+              HireMatch NLP Engine is evaluating requirements...
             </div>
           </div>
         )}

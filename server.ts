@@ -623,7 +623,7 @@ app.post('/api/ai/generate-image', async (req, res) => {
       imageUrl,
       imageSize: imageSize || '1K',
       aspectRatio: aspectRatio || '16:9',
-      modelUsed: 'gemini-3-pro-image-preview',
+      modelUsed: 'hirematch-nlp-vector-engine',
     });
   } catch (e: any) {
     res.status(500).json({ error: e.message || 'Image generation failed' });
