@@ -276,22 +276,49 @@ export const api = {
     return res.json();
   },
 
-  // AI Resume Parsing & Bulk Upload
-  async parseResume(resumeText: string, fileName?: string): Promise<{ extraction: ResumeExtractionResult; fileName: string; parsedAt: string }> {
-    const res = await fetch('/api/candidates/parse-resume', {
+  // Resume Document Extraction & NLP Parsing
+  async extractText(fileBase64: string, fileName?: string): Promise<{ text: string; fileName: string; length: number }> {
+    const res = await fetch('/api/candidates/extract-text', {
       method: 'POST',
       headers: getAuthHeaders({ 'Content-Type': 'application/json' }),
-      body: JSON.stringify({ resumeText, fileName }),
+      body: JSON.stringify({ fileBase64, fileName }),
     });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'Failed to extract text from document');
+    }
     return res.json();
   },
 
-  async bulkUploadResumes(resumes: { fileName: string; text: string }[]): Promise<{ processedCount: number; items: any[] }> {
+  async parseResume(
+    resumeText?: string,
+    fileName?: string,
+    fileBase64?: string
+  ): Promise<{ extraction: ResumeExtractionResult; fileName: string; extractedText?: string; parsedAt: string }> {
+    const res = await fetch('/api/candidates/parse-resume', {
+      method: 'POST',
+      headers: getAuthHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ resumeText, fileName, fileBase64 }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'Failed to parse resume');
+    }
+    return res.json();
+  },
+
+  async bulkUploadResumes(
+    resumes: Array<{ fileName: string; text?: string; fileBase64?: string; size?: number }>
+  ): Promise<{ processedCount: number; items: any[] }> {
     const res = await fetch('/api/candidates/bulk-upload', {
       method: 'POST',
       headers: getAuthHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({ resumes }),
     });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'Failed to bulk upload resumes');
+    }
     return res.json();
   },
 

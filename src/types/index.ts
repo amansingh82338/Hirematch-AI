@@ -118,6 +118,7 @@ export interface WorkHistoryItem {
   current?: boolean;
   description?: string;
   skillsUsed?: string[];
+  quote?: string;
 }
 
 export interface EducationItem {

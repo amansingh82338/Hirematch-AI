@@ -1,15 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Briefcase, X, Sparkles, Check, Sliders } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  Briefcase,
+  X,
+  Check,
+  Sliders,
+  Plus,
+  Upload,
+  FileText,
+  Loader2,
+  Trash2,
+} from 'lucide-react';
 import { Job, WorkplaceType, EmploymentType, ScoringWeights } from '../types';
 import { api } from '../services/api';
 import { useAuth } from '../context/AuthContext';
+import { readFileText, formatFileSize } from '../utils/fileUpload';
 
 interface JobCreateModalProps {
   isOpen: boolean;
   onClose: () => void;
   onJobCreated: (job: Job) => void;
   initialData?: Partial<Job>;
-  onOpenExtractor: () => void;
+  initialFile?: File;
+  onOpenExtractor?: () => void;
 }
 
 export const JobCreateModal: React.FC<JobCreateModalProps> = ({
@@ -17,7 +29,7 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
   onClose,
   onJobCreated,
   initialData,
-  onOpenExtractor,
+  initialFile,
 }) => {
   const { user } = useAuth();
 
@@ -30,13 +42,28 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
   const [salaryMax, setSalaryMax] = useState(210000);
   const [openingsCount, setOpeningsCount] = useState(1);
   const [description, setDescription] = useState('');
-  const [requiredSkills, setRequiredSkills] = useState<string[]>(['TypeScript', 'React', 'Node.js', 'PostgreSQL']);
+  const [requiredSkills, setRequiredSkills] = useState<string[]>([
+    'TypeScript',
+    'React',
+    'Node.js',
+    'PostgreSQL',
+  ]);
   const [preferredSkills, setPreferredSkills] = useState<string[]>(['Docker', 'Kubernetes', 'GraphQL']);
   const [experienceMinYears, setExperienceMinYears] = useState(5);
   const [educationLevel, setEducationLevel] = useState("Bachelor's Degree in Computer Science or related STEM field");
   const [skillInput, setSkillInput] = useState('');
   const [prefSkillInput, setPrefSkillInput] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Drag-and-drop & JD file ingestion
+  const [isDragging, setIsDragging] = useState(false);
+  const [loadingJd, setLoadingJd] = useState(false);
+  const [attachedJd, setAttachedJd] = useState<{
+    fileName: string;
+    size: number;
+  } | null>(null);
+
+  const jdFileInputRef = useRef<HTMLInputElement>(null);
 
   // Scoring weights configuration
   const [weights, setWeights] = useState<ScoringWeights>({
@@ -57,7 +84,10 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
       if (initialData.experienceMinYears) setExperienceMinYears(initialData.experienceMinYears);
       if (initialData.educationLevel) setEducationLevel(initialData.educationLevel);
     }
-  }, [initialData]);
+    if (initialFile) {
+      handleJdFile(initialFile);
+    }
+  }, [initialData, initialFile]);
 
   if (!isOpen) return null;
 
@@ -67,6 +97,81 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
     weights.education +
     weights.projects +
     weights.preferredSkills;
+
+  const handleJdFile = async (file: File) => {
+    setLoadingJd(true);
+    try {
+      const text = await readFileText(file);
+      setDescription(text);
+      setAttachedJd({
+        fileName: file.name,
+        size: file.size,
+      });
+
+      // If title is currently blank, infer from first line or file name
+      if (!title.trim()) {
+        const cleanName = file.name
+          .replace(/\.[^/.]+$/, '')
+          .replace(/[-_]/g, ' ')
+          .replace(/\bjd\b|\bjob description\b/gi, '')
+          .trim();
+        if (cleanName.length > 3) {
+          setTitle(cleanName.charAt(0).toUpperCase() + cleanName.slice(1));
+        } else {
+          const firstLine = text.split('\n').map((l) => l.trim()).find((l) => l.length > 5 && l.length < 60);
+          if (firstLine) setTitle(firstLine);
+        }
+      }
+
+      // Check common tech skills to pre-populate if found in text
+      const commonSkills = [
+        'TypeScript', 'JavaScript', 'React', 'Node.js', 'Python', 'Go', 'Java',
+        'Rust', 'Kubernetes', 'Docker', 'AWS', 'GCP', 'Azure', 'PostgreSQL',
+        'MySQL', 'GraphQL', 'Next.js', 'Tailwind CSS', 'Redis', 'Kafka',
+      ];
+      const detected = commonSkills.filter((s) => {
+        const re = new RegExp(`\\b${s}\\b`, 'i');
+        return re.test(text);
+      });
+      if (detected.length > 0) {
+        setRequiredSkills(Array.from(new Set([...requiredSkills, ...detected.slice(0, 5)])));
+      }
+
+      // Detect experience years if mentioned e.g. "5+ years", "3-5 years", "4 years"
+      const expMatch = text.match(/(\d+)\+?\s*(?:-\s*\d+)?\s*years?(?:\s+of)?\s+(?:experience|exp)/i);
+      if (expMatch && expMatch[1]) {
+        const yrs = parseInt(expMatch[1], 10);
+        if (yrs > 0 && yrs < 30) {
+          setExperienceMinYears(yrs);
+        }
+      }
+    } catch (e) {
+      console.error('Failed to parse JD file:', e);
+    } finally {
+      setLoadingJd(false);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = async (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      await handleJdFile(e.dataTransfer.files[0]);
+    }
+  };
 
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +203,6 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
         hiringManagerId: user?.id || 'usr_maria',
         recruiterId: user?.id || 'usr_david',
         scoringWeights: weights,
-        requirementsApproved: true,
       });
 
       onJobCreated(created);
@@ -125,7 +229,26 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto"
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
+    >
+      {/* Hidden file input */}
+      <input
+        type="file"
+        ref={jdFileInputRef}
+        accept=".txt,.md,.pdf,.docx,.doc,.json"
+        className="hidden"
+        onChange={(e) => {
+          if (e.target.files && e.target.files.length > 0) {
+            handleJdFile(e.target.files[0]);
+            e.target.value = '';
+          }
+        }}
+      />
+
       <div className="relative w-full max-w-3xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 shrink-0">
@@ -144,16 +267,9 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
           </div>
           <div className="flex items-center gap-2">
             <button
-              type="button"
-              onClick={onOpenExtractor}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-semibold hover:bg-indigo-100 transition-colors"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>AI JD Auto-Extract</span>
-            </button>
-            <button
               onClick={onClose}
               className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              aria-label="Close modal"
             >
               <X className="w-5 h-5" />
             </button>
@@ -162,6 +278,92 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
 
         {/* Form Body */}
         <form onSubmit={handleCreate} className="flex-1 overflow-y-auto p-6 space-y-5">
+          {/* Quick Import JD Document Zone */}
+          <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={`p-3.5 rounded-xl border-2 border-dashed transition-all ${
+              isDragging
+                ? 'border-indigo-500 bg-indigo-50/70 dark:bg-indigo-950/40 shadow-sm'
+                : 'border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/30'
+            }`}
+          >
+            {!attachedJd ? (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 rounded-lg bg-indigo-100/60 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 shrink-0">
+                    {loadingJd ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Upload className="w-4 h-4" />
+                    )}
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block">
+                      {loadingJd
+                        ? 'Loading Job Description...'
+                        : isDragging
+                        ? 'Drop JD document here'
+                        : 'Drag & Drop Job Description (TXT, MD, PDF, DOCX)'}
+                    </span>
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400">
+                      Optionally drop a file to populate description, title, and key technical skills.
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => jdFileInputRef.current?.click()}
+                  disabled={loadingJd}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-colors shrink-0"
+                >
+                  <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                  <span>Import JD File</span>
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="p-1.5 rounded-lg bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 shrink-0">
+                    <FileText className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-bold text-slate-800 dark:text-slate-200 truncate flex items-center gap-1.5">
+                      <span>{attachedJd.fileName}</span>
+                      <span className="text-[10px] font-mono text-slate-400">
+                        ({formatFileSize(attachedJd.size)})
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold block">
+                      ✓ Job description loaded and populated below
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => jdFileInputRef.current?.click()}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 transition-colors"
+                  >
+                    <Plus className="w-3 h-3 stroke-[2.5]" />
+                    <span>Replace</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setAttachedJd(null)}
+                    className="p-1.5 rounded-lg text-slate-400 hover:text-rose-500 transition-colors"
+                    title="Remove attached JD"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
@@ -312,13 +514,13 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
                     addRequiredSkill();
                   }
                 }}
-                placeholder="Type skill & press Enter (e.g. Python, Docker, PyTorch)"
+                placeholder="Type skill & press Enter"
                 className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
               />
               <button
                 type="button"
                 onClick={addRequiredSkill}
-                className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200"
+                className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300"
               >
                 Add
               </button>
@@ -328,13 +530,13 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
           {/* Preferred Skills */}
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-              Preferred / Bonus Skills
+              Preferred Skills (Soft Criteria)
             </label>
             <div className="flex flex-wrap gap-1.5">
               {preferredSkills.map((skill, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
                 >
                   {skill}
                   <button
@@ -468,7 +670,7 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
               </div>
               <div>
                 <label className="text-[11px] text-slate-500 dark:text-slate-400 block mb-1">
-                  Bonus Skills ({weights.preferredSkills}%)
+                  Pref. Skills ({weights.preferredSkills}%)
                 </label>
                 <input
                   type="range"
@@ -484,14 +686,24 @@ export const JobCreateModal: React.FC<JobCreateModalProps> = ({
 
           {/* Description */}
           <div>
-            <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
-              Overview & Responsibilities
-            </label>
+            <div className="flex items-center justify-between mb-1">
+              <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                Overview & Responsibilities
+              </label>
+              <button
+                type="button"
+                onClick={() => jdFileInputRef.current?.click()}
+                className="text-[11px] text-indigo-600 dark:text-indigo-400 font-semibold hover:underline flex items-center gap-1"
+              >
+                <Plus className="w-3 h-3 stroke-[2.5]" />
+                <span>Upload JD File</span>
+              </button>
+            </div>
             <textarea
               rows={4}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="Full role description and key impact areas..."
+              placeholder="Full role description, requirements, and key impact areas (or drag & drop a file here)..."
               className="w-full mt-1 px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
             />
           </div>

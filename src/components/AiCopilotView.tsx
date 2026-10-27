@@ -11,8 +11,12 @@ import {
   BookOpen,
   Scale,
   FileCheck,
+  Plus,
+  Upload,
+  FileText,
 } from 'lucide-react';
 import { api } from '../services/api';
+import { readFileText } from '../utils/fileUpload';
 
 interface Message {
   role: 'user' | 'model';
@@ -46,7 +50,9 @@ Select a role above or ask a question below!`,
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [isDraggingFile, setIsDraggingFile] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -279,7 +285,52 @@ Select a role above or ask a question below!`,
       </div>
 
       {/* Input Composer */}
-      <div className="shrink-0 flex gap-2">
+      <input
+        type="file"
+        ref={fileInputRef}
+        accept=".txt,.md,.pdf,.docx,.doc,.json"
+        className="hidden"
+        onChange={async (e) => {
+          if (e.target.files && e.target.files.length > 0) {
+            const text = await readFileText(e.target.files[0]);
+            setInput((prev) => (prev ? `${prev}\n\n[Attached: ${e.target.files![0].name}]\n${text}` : text));
+            e.target.value = '';
+          }
+        }}
+      />
+      <div
+        className={`shrink-0 flex items-center gap-2 p-1.5 rounded-2xl border transition-all ${
+          isDraggingFile
+            ? 'border-indigo-500 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-500/20'
+            : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800'
+        }`}
+        onDragOver={(e) => {
+          e.preventDefault();
+          setIsDraggingFile(true);
+        }}
+        onDragLeave={(e) => {
+          e.preventDefault();
+          setIsDraggingFile(false);
+        }}
+        onDrop={async (e) => {
+          e.preventDefault();
+          setIsDraggingFile(false);
+          if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            const file = e.dataTransfer.files[0];
+            const text = await readFileText(file);
+            setInput((prev) => (prev ? `${prev}\n\n[Dropped ${file.name}]:\n${text}` : text));
+          }
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          className="p-2.5 rounded-xl text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-700/60 transition-colors shrink-0"
+          title="Attach or drop Job Description or Resume"
+          aria-label="Attach file"
+        >
+          <Plus className="w-5 h-5 stroke-[2.5]" />
+        </button>
         <textarea
           rows={1}
           value={input}
@@ -290,13 +341,18 @@ Select a role above or ask a question below!`,
               handleSend();
             }
           }}
-          placeholder={`Ask your ${roleInfo[role].title}... (Press Enter to send)`}
-          className="flex-1 px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-indigo-500 resize-none shadow-xs"
+          placeholder={
+            isDraggingFile
+              ? 'Drop document here to load into prompt...'
+              : `Ask your ${roleInfo[role].title}... (Drop JD/resume or type)`
+          }
+          className="flex-1 px-2 py-2 bg-transparent text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-hidden resize-none"
         />
         <button
           onClick={() => handleSend()}
           disabled={loading || !input.trim()}
-          className="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm disabled:opacity-50 transition-colors shadow-sm shadow-indigo-500/20 shrink-0 flex items-center justify-center"
+          className="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm disabled:opacity-50 transition-colors shadow-sm shadow-indigo-500/20 shrink-0 flex items-center justify-center"
+          aria-label="Send message"
         >
           <Send className="w-4 h-4" />
         </button>

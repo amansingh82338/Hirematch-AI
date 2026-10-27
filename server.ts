@@ -16,6 +16,7 @@ import {
   isGeminiConfigured,
 } from './server/gemini';
 import { calculateCandidateJobMatch } from './src/services/matching';
+import { extractTextFromFileBuffer } from './server/documentParser';
 import { User, ApplicationStage } from './src/types';
 
 dotenv.config();
@@ -355,18 +356,52 @@ app.patch('/api/candidates/:id', (req, res) => {
   res.json(updated);
 });
 
-// --- AI RESUME PARSING ---
+// --- DOCUMENT TEXT EXTRACTION & NLP RESUME PARSING ---
+
+app.post('/api/candidates/extract-text', async (req, res) => {
+  const { fileBase64, fileName } = req.body;
+  if (!fileBase64 || typeof fileBase64 !== 'string') {
+    return res.status(400).json({ error: 'fileBase64 string is required' });
+  }
+
+  try {
+    const buffer = Buffer.from(fileBase64, 'base64');
+    const text = await extractTextFromFileBuffer(buffer, fileName || 'document.pdf');
+    res.json({
+      text,
+      fileName: fileName || 'document.pdf',
+      length: text.length,
+    });
+  } catch (err: any) {
+    console.error('Text extraction failed:', err);
+    res.status(500).json({ error: 'Failed to extract text from document', message: err.message });
+  }
+});
 
 app.post('/api/candidates/parse-resume', async (req, res) => {
-  const { resumeText, fileName } = req.body;
-  if (!resumeText) {
-    return res.status(400).json({ error: 'Resume text is required' });
+  let { resumeText, fileName, fileBase64 } = req.body;
+
+  if (fileBase64 && typeof fileBase64 === 'string') {
+    try {
+      const buffer = Buffer.from(fileBase64, 'base64');
+      const decodedText = await extractTextFromFileBuffer(buffer, fileName || 'Uploaded_Resume.pdf');
+      if (decodedText && decodedText.trim().length > 0) {
+        resumeText = decodedText;
+      }
+    } catch (err) {
+      console.error('Failed to extract text from fileBase64 in parse-resume:', err);
+    }
+  }
+
+  if (!resumeText || typeof resumeText !== 'string' || resumeText.trim().length === 0) {
+    return res.status(400).json({ error: 'Resume text or fileBase64 is required' });
   }
 
   const extraction = await parseResumeText(resumeText);
   res.json({
     extraction,
     fileName: fileName || 'Uploaded_Resume.pdf',
+    extractedText: resumeText,
     parsedAt: new Date().toISOString(),
   });
 });
@@ -380,7 +415,20 @@ app.post('/api/candidates/bulk-upload', async (req, res) => {
 
   const results = [];
   for (const item of resumes) {
-    const extraction = await parseResumeText(item.text);
+    let text = item.text || '';
+    if (item.fileBase64 && typeof item.fileBase64 === 'string') {
+      try {
+        const buffer = Buffer.from(item.fileBase64, 'base64');
+        const decoded = await extractTextFromFileBuffer(buffer, item.fileName);
+        if (decoded && decoded.trim().length > 0) {
+          text = decoded;
+        }
+      } catch (err) {
+        console.error('Failed to decode document in bulk-upload for', item.fileName, err);
+      }
+    }
+
+    const extraction = await parseResumeText(text);
     const existing = db.checkDuplicateCandidate(actor.organizationId, extraction.email);
 
     if (existing) {

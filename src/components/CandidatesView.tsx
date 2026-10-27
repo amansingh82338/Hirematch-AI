@@ -42,6 +42,8 @@ export const CandidatesView: React.FC<CandidatesViewProps> = ({
 
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isBulkOpen, setIsBulkOpen] = useState(openBulkImmediately);
+  const [droppedFiles, setDroppedFiles] = useState<File[]>([]);
+  const [isDraggingOverPage, setIsDraggingOverPage] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
 
   useEffect(() => {
@@ -66,8 +68,47 @@ export const CandidatesView: React.FC<CandidatesViewProps> = ({
     }
   };
 
+  const handlePageDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverPage(true);
+  };
+
+  const handlePageDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverPage(false);
+  };
+
+  const handlePageDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverPage(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      setDroppedFiles(Array.from(e.dataTransfer.files));
+      setIsBulkOpen(true);
+    }
+  };
+
   return (
-    <div className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto">
+    <div
+      className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto relative"
+      onDragOver={handlePageDragOver}
+      onDragLeave={handlePageDragLeave}
+      onDrop={handlePageDrop}
+    >
+      {isDraggingOverPage && (
+        <div className="fixed inset-0 z-40 bg-indigo-900/60 backdrop-blur-xs flex items-center justify-center pointer-events-none">
+          <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 shadow-2xl border-4 border-dashed border-indigo-500 text-center space-y-3 max-w-md">
+            <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto">
+              <Upload className="w-8 h-8 animate-bounce" />
+            </div>
+            <p className="text-lg font-bold text-slate-900 dark:text-white">
+              Drop resumes anywhere to parse
+            </p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Files will open directly in Bulk Resume Ingestion & Evidence Extractor.
+            </p>
+          </div>
+        </div>
+      )}
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -288,7 +329,11 @@ export const CandidatesView: React.FC<CandidatesViewProps> = ({
 
       <BulkResumeModal
         isOpen={isBulkOpen}
-        onClose={() => setIsBulkOpen(false)}
+        initialFiles={droppedFiles}
+        onClose={() => {
+          setIsBulkOpen(false);
+          setDroppedFiles([]);
+        }}
         onUploadComplete={loadCandidates}
       />
 

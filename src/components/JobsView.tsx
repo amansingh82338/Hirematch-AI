@@ -16,11 +16,11 @@ import {
   Edit,
   Eye,
   Sliders,
+  Upload,
 } from 'lucide-react';
 import { Job, JobStatus, WorkplaceType } from '../types';
 import { api } from '../services/api';
 import { JobCreateModal } from './JobCreateModal';
-import { JobExtractModal } from './JobExtractModal';
 import { NavTab } from './Sidebar';
 
 interface JobsViewProps {
@@ -40,8 +40,8 @@ export const JobsView: React.FC<JobsViewProps> = ({
   const [workplaceFilter, setWorkplaceFilter] = useState('');
 
   const [isCreateOpen, setIsCreateOpen] = useState(openCreateImmediately);
-  const [isExtractOpen, setIsExtractOpen] = useState(false);
-  const [extractedPrefill, setExtractedPrefill] = useState<Partial<Job> | undefined>(undefined);
+  const [droppedJdFile, setDroppedJdFile] = useState<File | undefined>(undefined);
+  const [isDraggingOverJobs, setIsDraggingOverJobs] = useState(false);
   const [selectedJobForDetail, setSelectedJobForDetail] = useState<Job | null>(null);
 
   useEffect(() => {
@@ -74,13 +74,48 @@ export const JobsView: React.FC<JobsViewProps> = ({
     }
   };
 
-  const handleApplyExtractedRequirements = (extracted: Partial<Job>) => {
-    setExtractedPrefill(extracted);
-    setIsCreateOpen(true);
+
+  const handlePageDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverJobs(true);
+  };
+
+  const handlePageDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverJobs(false);
+  };
+
+  const handlePageDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingOverJobs(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      setDroppedJdFile(e.dataTransfer.files[0]);
+      setIsCreateOpen(true);
+    }
   };
 
   return (
-    <div className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto">
+    <div
+      className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto relative"
+      onDragOver={handlePageDragOver}
+      onDragLeave={handlePageDragLeave}
+      onDrop={handlePageDrop}
+    >
+      {isDraggingOverJobs && (
+        <div className="fixed inset-0 z-40 bg-indigo-900/60 backdrop-blur-xs flex items-center justify-center pointer-events-none">
+          <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 shadow-2xl border-4 border-dashed border-indigo-500 text-center space-y-3 max-w-md">
+            <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto">
+              <Upload className="w-8 h-8 animate-bounce" />
+            </div>
+            <p className="text-lg font-bold text-slate-900 dark:text-white">
+              Drop Job Description to Create Opening
+            </p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              The file will open in the Job Creator with title, requirements, and description prefilled.
+            </p>
+          </div>
+        </div>
+      )}
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -97,17 +132,7 @@ export const JobsView: React.FC<JobsViewProps> = ({
 
         <div className="flex items-center gap-2.5">
           <button
-            onClick={() => setIsExtractOpen(true)}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors"
-          >
-            <Sparkles className="w-4 h-4 text-indigo-500" />
-            <span>AI JD Auto-Extract</span>
-          </button>
-          <button
-            onClick={() => {
-              setExtractedPrefill(undefined);
-              setIsCreateOpen(true);
-            }}
+            onClick={() => setIsCreateOpen(true)}
             className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm shadow-indigo-500/20 transition-colors"
           >
             <Plus className="w-4 h-4" />
@@ -323,21 +348,14 @@ export const JobsView: React.FC<JobsViewProps> = ({
       {/* Modals */}
       <JobCreateModal
         isOpen={isCreateOpen}
-        onClose={() => setIsCreateOpen(false)}
-        initialData={extractedPrefill}
+        initialFile={droppedJdFile}
+        onClose={() => {
+          setIsCreateOpen(false);
+          setDroppedJdFile(undefined);
+        }}
         onJobCreated={(newJob) => {
           setJobs([newJob, ...jobs]);
         }}
-        onOpenExtractor={() => {
-          setIsCreateOpen(false);
-          setIsExtractOpen(true);
-        }}
-      />
-
-      <JobExtractModal
-        isOpen={isExtractOpen}
-        onClose={() => setIsExtractOpen(false)}
-        onApplyRequirements={handleApplyExtractedRequirements}
       />
 
       {/* Job Detail Modal */}
